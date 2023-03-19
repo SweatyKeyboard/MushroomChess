@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343edbb0a78b1d242a8afdb3bae88035, type: 3}
+  m_Name: Digits
+  m_EditorClassIdentifier: 
+  _list:
+  - {fileID: -2432090755550338912, guid: e7adadd635bf13045bd9892dfbc7e902, type: 3}
+  - {fileID: -2432090755550338912, guid: 263fb2ce53ff5a442bcde628271aa66f, type: 3}
+  - {fileID: -2432090755550338912, guid: da1ea1794e91ad24ab3bc96fb729388a, type: 3}
+  - {fileID: -2432090755550338912, guid: d27285d239ab88342ae5297eda3c5627, type: 3}
+  - {fileID: -2432090755550338912, guid: 40913af7180780040b56f91b74826fc0, type: 3}
