@@ -32,19 +32,13 @@ public class ActionPanelElement : MonoBehaviour
         switch (action.ActionType)
         {
             case ActionType.Jump:
-                if (_unitPanel.JumpsCount > 0)
-                {
-                    _action = new JumpAction(_unitPanel.Unit, 1, 0.5f);
-                    Category = ActionCategory.Jumping;
-                }
+                _action = new JumpAction(_unitPanel.Unit, 1, 0.5f);
+                Category = ActionCategory.Jumping;
                 break;
 
             case ActionType.MoveForward:
-                if (_unitPanel.MovesCount > 0)
-                {
-                    _action = new MoveForwardAction(_unitPanel.Unit, 1);
-                    Category = ActionCategory.Moving;
-                }
+                _action = new MoveForwardAction(_unitPanel.Unit, 1);
+                Category = ActionCategory.Moving;
                 break;
 
             case ActionType.RotateLeft:
@@ -53,35 +47,23 @@ public class ActionPanelElement : MonoBehaviour
                 break;
 
             case ActionType.RotateRight:
-                if (_unitPanel.RotatesCount > 0)
-                {
-                    _action = new RotationAction(_unitPanel.Unit, 90);
-                    Category = ActionCategory.Rotating;
-                }
+                _action = new RotationAction(_unitPanel.Unit, 90);
+                Category = ActionCategory.Rotating;
                 break;
 
             case ActionType.LowerGround:
-                if (_unitPanel.SpecialCount > 0)
-                {
-                    _action = new GroundMoveAction(_unitPanel.Unit, false);
-                    Category = ActionCategory.Specialing;
-                }
+                _action = new GroundMoveAction(_unitPanel.Unit, false);
+                Category = ActionCategory.Specialing;
                 break;
 
             case ActionType.RaiseGround:
-                if (_unitPanel.SpecialCount > 0)
-                {
-                    _action = new GroundMoveAction(_unitPanel.Unit, true);
-                    Category = ActionCategory.Specialing;
-                }
+                _action = new GroundMoveAction(_unitPanel.Unit, true);
+                Category = ActionCategory.Specialing;
                 break;
 
             case ActionType.Push:
-                if (_unitPanel.SpecialCount > 0)
-                {
-                    _action = new ElementMovingAction(_unitPanel.Unit, 1);
-                    Category = ActionCategory.Specialing;
-                }
+                _action = new ElementMovingAction(_unitPanel.Unit, 1);
+                Category = ActionCategory.Specialing;
                 break;
         }
         UpdateCounter();
@@ -108,54 +90,65 @@ public class ActionPanelElement : MonoBehaviour
         }
     }
 
+    private bool AreThereActionsInCategory(ActionCategory category)
+    {
+        switch (category)
+        {
+            case ActionCategory.Moving:
+                return _unitPanel.MovesCount > 0;
+
+            case ActionCategory.Jumping:
+                return _unitPanel.JumpsCount > 0;
+
+            case ActionCategory.Rotating:
+                return _unitPanel.RotatesCount > 0;
+
+            case ActionCategory.Specialing:
+                return _unitPanel.SpecialCount > 0;
+            default:
+                return false;
+        }
+    }
+
     public void AddToTurnList()
     {
-        bool isActionShouldBeDone = true;
+        bool isActionShouldBeDone = false;
+
+        if (!AreThereActionsInCategory(Category))
+            return;
 
         switch (Category)
         {
             case ActionCategory.Jumping:
-                if (_unitPanel.JumpsCount > 0)
-                {
-                    _unitPanel.OnJump();
-                    isActionShouldBeDone = true;
-                }
+                _unitPanel.OnJump();
+                isActionShouldBeDone = true;
                 break;
 
             case ActionCategory.Moving:
-                if (_unitPanel.MovesCount > 0)
-                {
-                    _unitPanel.OnMove();
-                    isActionShouldBeDone = true;
-                }
+                _unitPanel.OnMove();
+                isActionShouldBeDone = true;
                 break;
 
             case ActionCategory.Rotating:
-                if (_unitPanel.RotatesCount > 0)
-                {
-                    _unitPanel.OnRotate();
-                    isActionShouldBeDone = true;
-                }
+                _unitPanel.OnRotate();
+                isActionShouldBeDone = true;
                 break;
 
             case ActionCategory.Specialing:
-                if (_unitPanel.SpecialCount > 0)
-                {
-                    _unitPanel.OnSpecial();
-                    isActionShouldBeDone = true;
-                }
+                _unitPanel.OnSpecial();
+                isActionShouldBeDone = true;
                 break;
         }
 
-        if (isActionShouldBeDone)
-        {
-            bool isSucceeded;
-            TurnsPanel.Instance.AddAction(this, _icon.sprite, out isSucceeded);
 
-            if (isSucceeded)
-            {
-                Clicking?.Invoke();
-            }
+        if (!isActionShouldBeDone)
+            return;
+
+        bool isSucceeded;
+        TurnsPanel.Instance.AddAction(this, _icon.sprite, out isSucceeded);
+        if (isSucceeded)
+        {
+            Clicking?.Invoke();
         }
     }
 
