@@ -5,11 +5,17 @@ public class LevelSelector : MonoBehaviour
 {
     public int SelectedLevel { get; private set; }
 
+    private static LevelSelector _instance;
+
     private void Awake()
     {
-        if (FindObjectsOfType<LevelSelector>().Length > 1)
+        if (_instance != null)
         {
             Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
         }
         DontDestroyOnLoad(this);
     }

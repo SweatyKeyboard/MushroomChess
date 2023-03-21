@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 18985
+  controlID: 24801
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 18986
+  controlID: 24791
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 18987
+  controlID: 24792
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,7 +228,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c8dbfdffa649feff1e4bfeff5a5dfeff0a0affff1619ffffa430ffffac41ffffe246ffffae4bffff664cffff044dffffa24dffff404effff6485ffff0086ffffe287fffff487ffff44d6ffffd0e0ffff62e5ffffe8efffff30f4ffff24f6ffff72a40000dea90000f0a90000faa9000070b200007ab2000084b200009eb2000014d500001ed5000042d50000
+      m_ExpandedIDs: 34c1fcff64f6fcffa6fbfcffcc2ffdffc8dbfdffa649feff1e4bfeff5a5dfeff0a0affff1619ffffa430ffffac41ffffe246ffffae4bffff664cffff044dffffa24dffff404effff6485ffff0086ffffe287fffff487ffff44d6ffffd0e0ffff62e5ffffe8efffff30f4ffff24f6ffff72a40000dea90000f0a90000faa9000070b200007ab2000084b200009eb2000014d500001ed5000042d50000acf20000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -506,9 +506,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1605.2739, y: -386.63974, z: 4277.3076}
+    m_Target: {x: 810.3585, y: -246.21948, z: 4298.519}
     speed: 2
-    m_Value: {x: 1605.2739, y: -386.63974, z: 4277.3076}
+    m_Value: {x: 810.3585, y: -246.21948, z: 4298.519}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -555,13 +555,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.06951908, y: -0.18535468, z: 0.0131454915, w: -0.98013854}
+    m_Target: {x: -0.05725127, y: -0.030847989, z: 0.0017693989, w: -0.99789965}
     speed: 2
-    m_Value: {x: -0.06951791, y: -0.18535157, z: 0.013145271, w: -0.9801221}
+    m_Value: {x: -0.05725024, y: -0.030847434, z: 0.001769367, w: -0.9978817}
   m_Size:
-    m_Target: 2269.085
+    m_Target: 2581.6138
     speed: 2
-    m_Value: 2269.085
+    m_Value: 2581.6138
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1238,21 +1238,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Unity Games\MushroomChess
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 228}
-    m_SelectedIDs: 90700000
-    m_LastClickedID: 28816
+    scrollPos: {x: 0, y: 180}
+    m_SelectedIDs: b0700000
+    m_LastClickedID: 28848
     m_ExpandedIDs: 00000000887000008a7000008c7000008e70000090700000ba70000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1281,7 +1281,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000887000008a7000008c7000008e70000090700000ba70000000ca9a3b
+    m_ExpandedIDs: 00000000887000008a7000008c7000008e700000ba70000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1306,8 +1306,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: d0700000
+    m_LastClickedInstanceID: 28880
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300005e6d0000
     m_RenameOverlay:
@@ -1427,7 +1427,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: 28880
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

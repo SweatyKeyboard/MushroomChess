@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 475778810}
   - component: {fileID: 475778814}
   - component: {fileID: 475778813}
+  - component: {fileID: 475778815}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -718,6 +719,18 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
+--- !u!114 &475778815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475778809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32d66a7db3ae0d408a3d4d1a36359c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &498225117
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,8 +951,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1683173346}
-        m_TargetAssemblyTypeName: LevelSelector, Assembly-CSharp
+      - m_Target: {fileID: 475778815}
+        m_TargetAssemblyTypeName: LevelSelectorWrap, Assembly-CSharp
         m_MethodName: GoToLevel
         m_Mode: 3
         m_Arguments:
@@ -2023,8 +2036,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1683173346}
-        m_TargetAssemblyTypeName: LevelSelector, Assembly-CSharp
+      - m_Target: {fileID: 475778815}
+        m_TargetAssemblyTypeName: LevelSelectorWrap, Assembly-CSharp
         m_MethodName: GoToLevel
         m_Mode: 3
         m_Arguments:
@@ -2303,8 +2316,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1683173346}
-        m_TargetAssemblyTypeName: LevelSelector, Assembly-CSharp
+      - m_Target: {fileID: 475778815}
+        m_TargetAssemblyTypeName: LevelSelectorWrap, Assembly-CSharp
         m_MethodName: GoToLevel
         m_Mode: 3
         m_Arguments:
