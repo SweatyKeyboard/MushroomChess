@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
-    [SerializeField] private BoardData _data;
+    [SerializeField] private BoardData[] _levels;
 
     [SerializeField] private BoardCell _cellPrefab;
     [SerializeField] private Transform _wallPrefab;
@@ -15,6 +15,8 @@ public class Board : MonoBehaviour
 
     private BoardCell[,] _cellPositions;
     private bool[,] _occupiedCells;
+
+    private int _selectedLevel;
 
     private float _scale = 1f;
     public float StairScale = 0.1f;
@@ -38,18 +40,19 @@ public class Board : MonoBehaviour
         _colorRandomizer = FindObjectOfType<ColorRandomizer>();
         _colorRandomizer.RandomizeColor();
 
-        CreateFromFileData(_data);        
+        _selectedLevel = FindObjectOfType<LevelSelector>().SelectedLevel;
+        CreateFromFileData(_levels[_selectedLevel - 1]);        
     }
 
     private void CreateFromFileData(BoardData data)
     {
-        _boardSize = _data.BoardSize;
+        _boardSize = data.BoardSize;
         for (int i = 0; i < _boardSize; i++)
         {
             for (int j = 0; j < _boardSize; j++)
             {
                 CreateCell(i, j);
-                SetCellHeight(i, j, _data.HeightMap[i + j * _data.BoardSize]);
+                SetCellHeight(i, j, data.HeightMap[i + j * data.BoardSize]);
                 ColorChesslike(i, j);
                 UpdateSigns(i, j);
             }
