@@ -34,6 +34,6 @@ MonoBehaviour:
     <Rotation>k__BackingField:
       _angle: 180
     <MoveAcionsCount>k__BackingField: 0
-    <RotateAcionsCount>k__BackingField: 3
+    <RotateAcionsCount>k__BackingField: 2
     <JumpAcionsCount>k__BackingField: 0
     <SpecialAcionsCount>k__BackingField: 4

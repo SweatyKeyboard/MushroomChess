@@ -23,8 +23,8 @@ MonoBehaviour:
     <Rotation>k__BackingField:
       _angle: 90
     <MoveAcionsCount>k__BackingField: 7
-    <RotateAcionsCount>k__BackingField: 5
-    <JumpAcionsCount>k__BackingField: 7
+    <RotateAcionsCount>k__BackingField: 4
+    <JumpAcionsCount>k__BackingField: 6
     <SpecialAcionsCount>k__BackingField: 1
   - <UnitData>k__BackingField: {fileID: 11400000, guid: 2e5b2ffb4f006e84a88d354303430536,
       type: 2}
@@ -34,9 +34,9 @@ MonoBehaviour:
     <Rotation>k__BackingField:
       _angle: 180
     <MoveAcionsCount>k__BackingField: 0
-    <RotateAcionsCount>k__BackingField: 4
+    <RotateAcionsCount>k__BackingField: 3
     <JumpAcionsCount>k__BackingField: 0
-    <SpecialAcionsCount>k__BackingField: 3
+    <SpecialAcionsCount>k__BackingField: 2
   - <UnitData>k__BackingField: {fileID: 11400000, guid: 2e5b2ffb4f006e84a88d354303430536,
       type: 2}
     <Position>k__BackingField:
@@ -47,4 +47,4 @@ MonoBehaviour:
     <MoveAcionsCount>k__BackingField: 0
     <RotateAcionsCount>k__BackingField: 4
     <JumpAcionsCount>k__BackingField: 0
-    <SpecialAcionsCount>k__BackingField: 3
+    <SpecialAcionsCount>k__BackingField: 2
