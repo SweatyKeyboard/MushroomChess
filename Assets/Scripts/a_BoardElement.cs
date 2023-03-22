@@ -66,4 +66,18 @@ public class a_BoardElement : MonoBehaviour
             yield return CourutineAnimations.Move(gameObject, Board.Instance[newPosition.X, newPosition.Y]);
         }
     }
+
+    public bool IsAbleToRotate()
+    {
+        return true;
+    }
+
+    public IEnumerator Rotate(int angle)
+    {
+        if (IsAbleToRotate())
+        {
+            Rotation.Angle += angle;
+            yield return CourutineAnimations.Rotate(gameObject, angle);
+        }
+    }
 }

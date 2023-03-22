@@ -65,6 +65,16 @@ public class ActionPanelElement : MonoBehaviour
                 _action = new ElementMovingAction(_unitPanel.Unit, 1);
                 Category = ActionCategory.Specialing;
                 break;
+
+            case ActionType.Run:
+                _action = new MoveForwardAction(_unitPanel.Unit, 2);
+                Category = ActionCategory.Moving;
+                break;
+
+            case ActionType.Roll:
+                _action = new ElementRotatingAction(_unitPanel.Unit, 180);
+                Category = ActionCategory.Specialing;
+                break;
         }
         UpdateCounter();
 

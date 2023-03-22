@@ -22,5 +22,7 @@ public enum ActionType
     RotateRight,
     RaiseGround,
     LowerGround,
-    Push
+    Push,
+    Run,
+    Roll
 }

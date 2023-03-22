@@ -48,10 +48,7 @@ public abstract class a_Unit : a_BoardElement
         return true;
     }
 
-    public bool IsAbleToRotate()
-    {
-        return true;
-    }
+
     public IEnumerator MoveForward(int distance)
     {
         Position newPos = new Position(
@@ -90,15 +87,6 @@ public abstract class a_Unit : a_BoardElement
             yield return CourutineAnimations.Jump(gameObject, Board.Instance[newPos.X, newPos.Y], height);
         }
         Moving?.Invoke();
-    }
-
-    public IEnumerator Rotate(int angle)
-    {
-        if (IsAbleToRotate())
-        {
-            Rotation.Angle += angle;
-            yield return CourutineAnimations.Rotate(gameObject, angle);
-        }
     }
 
 }

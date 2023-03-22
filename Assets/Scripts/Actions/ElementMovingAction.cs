@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 public class ElementMovingAction : a_Action
 {
@@ -24,7 +22,5 @@ public class ElementMovingAction : a_Action
                 return null;
             }
         }
-    }
-
-       
+    }     
 }
