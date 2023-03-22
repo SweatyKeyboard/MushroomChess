@@ -24,4 +24,9 @@ public class LevelSelector : MonoBehaviour
         SelectedLevel = levelNumber;
         SceneManager.LoadScene("Game");
     }
+
+    public void RestartCurrentLevel()
+    {
+        SceneManager.LoadScene("Game");
+    }
 }

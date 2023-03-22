@@ -6,4 +6,9 @@ public class LevelSelectorWrap : MonoBehaviour
     {
         FindObjectOfType<LevelSelector>().GoToLevel(levelNumber);
     }
+
+    public void GoToLevel()
+    {
+        FindObjectOfType<LevelSelector>().RestartCurrentLevel();
+    }
 }
