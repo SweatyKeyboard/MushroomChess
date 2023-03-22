@@ -25,15 +25,15 @@ MonoBehaviour:
     <MoveAcionsCount>k__BackingField: 10
     <RotateAcionsCount>k__BackingField: 5
     <JumpAcionsCount>k__BackingField: 0
-    <SpecialAcionsCount>k__BackingField: 0
+    <SpecialAcionsCount>k__BackingField: 1
   - <UnitData>k__BackingField: {fileID: 11400000, guid: 2e5b2ffb4f006e84a88d354303430536,
       type: 2}
     <Position>k__BackingField:
       _x: 2
       _y: 2
     <Rotation>k__BackingField:
-      _angle: 270
+      _angle: 0
     <MoveAcionsCount>k__BackingField: 0
-    <RotateAcionsCount>k__BackingField: 5
+    <RotateAcionsCount>k__BackingField: 3
     <JumpAcionsCount>k__BackingField: 0
-    <SpecialAcionsCount>k__BackingField: 5
+    <SpecialAcionsCount>k__BackingField: 3
