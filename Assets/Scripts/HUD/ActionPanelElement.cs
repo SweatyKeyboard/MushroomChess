@@ -85,6 +85,11 @@ public class ActionPanelElement : MonoBehaviour
                 _action = new MoveRightAction(_unitPanel.Unit, 1);
                 Category = ActionCategory.Moving;
                 break;
+
+            case ActionType.Finish:
+                _action = new FinishLevelAction(_unitPanel.Unit);
+                Category = ActionCategory.Specialing;
+                break;
         }
         UpdateCounter();
 

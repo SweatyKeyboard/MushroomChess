@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Spawner : a_CellModifier
+public class Spawner : a_BoardObject
 {
     private void OnMouseDown()
     {

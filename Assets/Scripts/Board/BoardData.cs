@@ -7,20 +7,16 @@ using UnityEngine;
 public class BoardData : ScriptableObject
 {
     [SerializeField] public int BoardSize = 5;
-    [SerializeField] public int BoardSiz { get; set; } = 5;
-    [SerializeField] public int[] HeightMapa { get; set; }
     [SerializeField] public int[] HeightMap = new int[25];
 
-    [SerializeField] public List<UnitSpawnData> Unitsa { get; set; } = new List<UnitSpawnData>();
+    [SerializeField] public Position FinishPosition;
     [SerializeField] public List<UnitSpawnData> Units = new List<UnitSpawnData>();
 
     private void OnEnable()
     {
-        if (HeightMap == null)
-        {
-            HeightMap = new int[BoardSize*BoardSize];
-            //HeightMapa = new int[BoardSize*BoardSize];
-        }
+        if (HeightMap != null)
+            return;
+        HeightMap = new int[BoardSize * BoardSize];
     }
 
     public void FillHeightMapWith(int value)

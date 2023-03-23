@@ -27,4 +27,14 @@ public class Position
     {
         return new Position(position1.X + position2.X, position1.Y + position2.Y);
     }
+
+    public static bool operator==(Position position1, Position position2)
+    {
+        return position1.X == position2.X && position1.Y == position2.Y;
+    }
+
+    public static bool operator !=(Position position1, Position position2)
+    {
+        return position1.X != position2.X || position1.Y != position2.Y;
+    }
 }

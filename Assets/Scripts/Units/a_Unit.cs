@@ -77,12 +77,12 @@ public abstract class a_Unit : a_BoardElement
 
     public IEnumerator MoveLeft(int distance)
     {
-        return Move(distance, 90);
+        return Move(distance, -90);
     }
 
     public IEnumerator MoveRight(int distance)
     {
-        return Move(distance, -90);
+        return Move(distance, 90);
     }
 
     public IEnumerator JumpForward(int distance, float height)

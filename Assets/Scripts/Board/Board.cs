@@ -5,8 +5,7 @@ public class Board : MonoBehaviour
     [SerializeField] private BoardData[] _levels;
 
     [SerializeField] private BoardCell _cellPrefab;
-    [SerializeField] private Transform _wallPrefab;
-    [SerializeField] private Spawner _spawnPrefab;
+    [SerializeField] private Transform _finishPrefab;
 
     [SerializeField] private SingnsList _digits;
     [SerializeField] private SingnsList _letters;
@@ -24,7 +23,9 @@ public class Board : MonoBehaviour
     private ColorRandomizer _colorRandomizer;
     [SerializeField] private UnitPanel _unitPanel;
     public BoardCell[,] Cells => _cellPositions;
+    public int LevelCount => _levels.Length;
     public int BoardSize => _boardSize;
+    public Position FinishPosition { get; private set; }
     public static Board Instance;
     public Vector3 this[int i, int j] => new Vector3(
         _cellPositions[i, j].transform.position.x,
@@ -33,7 +34,16 @@ public class Board : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+
         _cellPositions = new BoardCell[_boardSize, _boardSize];
         _occupiedCells = new bool[_boardSize, _boardSize];
 
@@ -41,7 +51,7 @@ public class Board : MonoBehaviour
         _colorRandomizer.RandomizeColor();
 
         _selectedLevel = FindObjectOfType<LevelSelector>().SelectedLevel;
-        CreateFromFileData(_levels[_selectedLevel - 1]);        
+        CreateFromFileData(_levels[_selectedLevel - 1]);
     }
 
     private void CreateFromFileData(BoardData data)
@@ -64,6 +74,7 @@ public class Board : MonoBehaviour
         }
 
         transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+        CreateFinish(data.FinishPosition);
     }
 
     private void CreateCell(int i, int j)
@@ -76,7 +87,17 @@ public class Board : MonoBehaviour
                        0,
                        _scale * (j - _boardSize / 2)),
                    Quaternion.identity,
-                   transform);        
+                   transform);
+    }
+
+    private void CreateFinish(Position position)
+    {
+        Instantiate(
+               _finishPrefab,
+               this[position.X, position.Y] + new Vector3(0, 0.01f, 0),
+               Quaternion.identity,
+               transform);
+        FinishPosition = position;
     }
 
     private void SetCellHeight(int i, int j, int height = 1)
@@ -108,15 +129,6 @@ public class Board : MonoBehaviour
             j == 0);
     }
 
-    private void CreateWall(int i, int j, int angle = 0)
-    {
-        Transform wall = Instantiate(
-                            _wallPrefab,
-                           this[i, j],
-                            Quaternion.Euler(0, angle, 0),
-                            transform);
-    }
-
     private void SpawnUnit(UnitSpawnData unitSpawnData)
     {
         int x = unitSpawnData.Position.X;
@@ -129,7 +141,7 @@ public class Board : MonoBehaviour
 
         newUnit.Position = new Position(x, y);
         newUnit.Rotation = new Rotation(unitSpawnData.Rotation.Angle);
-        newUnit.transform.rotation = Quaternion.Euler(0,newUnit.Rotation.Angle, 0);
+        newUnit.transform.rotation = Quaternion.Euler(0, newUnit.Rotation.Angle, 0);
 
         Cells[x, y].Element = newUnit;
         UpdateOcuppiedCells(new Position(x, y));

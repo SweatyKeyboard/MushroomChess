@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 1351170317050134048}
   - component: {fileID: 4185952241778231146}
   - component: {fileID: 806926377441960958}
-  - component: {fileID: 6676230893798239013}
+  - component: {fileID: 6582688553319095668}
   m_Layer: 0
   m_Name: BoardCell
   m_TagString: Untagged
@@ -420,7 +420,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6676230893798239013
+--- !u!114 &6582688553319095668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7815571921458507035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5f80103911dbdc48888004fb23dece2, type: 3}
+  m_Script: {fileID: 11500000, guid: f603ef9d88f3c184daeecfd801dbc94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _letters:
