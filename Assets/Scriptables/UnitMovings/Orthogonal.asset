@@ -13,13 +13,4 @@ MonoBehaviour:
   m_Name: Orthogonal
   m_EditorClassIdentifier: 
   _isAbleToFly: 0
-  _possibleMovingVectors:
-  - _x: 0
-    _y: 1
-  - _x: 0
-    _y: -1
-  - _x: 1
-    _y: 0
-  - _x: -1
-    _y: 0
   _jumpHeight: 1
