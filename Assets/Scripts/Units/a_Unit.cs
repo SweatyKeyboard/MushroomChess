@@ -48,12 +48,13 @@ public abstract class a_Unit : a_BoardElement
         return true;
     }
 
-
-    public IEnumerator MoveForward(int distance)
+    private IEnumerator Move(int distance, int angleBias)
     {
+        Rotation tempRotation = new Rotation(Rotation.Angle + angleBias);
+
         Position newPos = new Position(
-            Position.X + Rotation.X * distance,
-            Position.Y + Rotation.Y * distance);
+            Position.X + tempRotation.X * distance,
+            Position.Y + tempRotation.Y * distance);
 
         if (IsAbleToMove(newPos))
         {
@@ -67,6 +68,21 @@ public abstract class a_Unit : a_BoardElement
             yield return CourutineAnimations.Move(gameObject, Board.Instance[newPos.X, newPos.Y]);
         }
         Moving?.Invoke();
+    }
+
+    public IEnumerator MoveForward(int distance)
+    {
+        return Move(distance, 0);
+    }
+
+    public IEnumerator MoveLeft(int distance)
+    {
+        return Move(distance, 90);
+    }
+
+    public IEnumerator MoveRight(int distance)
+    {
+        return Move(distance, -90);
     }
 
     public IEnumerator JumpForward(int distance, float height)
