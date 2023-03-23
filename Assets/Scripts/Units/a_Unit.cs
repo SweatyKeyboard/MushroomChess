@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class a_Unit : a_BoardElement
@@ -10,42 +9,6 @@ public abstract class a_Unit : a_BoardElement
     public override bool IsAbleToMove(Position position)
     {
         return base.IsAbleToMove(position);
-    }
-
-    public virtual bool IsAbleToJump(Position position)
-    {
-        int x1 = Position.X;
-        int y1 = Position.Y;
-        int x2 = position.X;
-        int y2 = position.Y;
-
-        if (x2 < 0 || y2 < 0)
-        {
-            Debug.Log("<0");
-            return false;
-        }
-
-        if (x2 >= Board.Instance.BoardSize || y2 >= Board.Instance.BoardSize)
-        {
-            Debug.Log(">5");
-            return false;
-        }
-
-        if (Board.Instance.IsCellEmpty(new Position(x2, y2)))
-        {
-            Debug.Log("occupied");
-            return false;
-        }
-
-        if (Board.Instance.Cells[x2, y2].Height -
-            Board.Instance.Cells[x1, y1].Height >
-            _moving.JumpHeight)
-        {
-            Debug.Log("too high");
-            return false;
-        }
-
-        return true;
     }
 
     private IEnumerator Move(int distance, int angleBias)
@@ -91,7 +54,7 @@ public abstract class a_Unit : a_BoardElement
             Position.X + Rotation.X * distance,
             Position.Y + Rotation.Y * distance);
 
-        if (IsAbleToJump(newPos))
+        if (IsAbleToJump(newPos, _moving.JumpHeight))
         {
             Board.Instance.UpdateOcuppiedCells(Position);
             Board.Instance.UpdateOcuppiedCells(newPos);
@@ -104,5 +67,4 @@ public abstract class a_Unit : a_BoardElement
         }
         Moving?.Invoke();
     }
-
 }

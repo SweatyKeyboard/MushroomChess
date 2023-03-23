@@ -90,6 +90,11 @@ public class ActionPanelElement : MonoBehaviour
                 _action = new FinishLevelAction(_unitPanel.Unit);
                 Category = ActionCategory.Specialing;
                 break;
+
+            case ActionType.Throw:
+                _action = new ElementThrowingAction(_unitPanel.Unit, 2);
+                Category = ActionCategory.Specialing;
+                break;
         }
         UpdateCounter();
 
@@ -140,6 +145,9 @@ public class ActionPanelElement : MonoBehaviour
         bool isActionShouldBeDone = false;
 
         if (!AreThereActionsInCategory(Category))
+            return;
+
+        if (TurnsPanel.Instance.TurnsList.Count >= 5)
             return;
 
         switch (Category)

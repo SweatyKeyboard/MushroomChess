@@ -49,6 +49,40 @@ public class a_BoardElement : MonoBehaviour
         return true;
     }
 
+    public virtual bool IsAbleToJump(Position position, int height)
+    {
+        int x1 = Position.X;
+        int y1 = Position.Y;
+        int x2 = position.X;
+        int y2 = position.Y;
+
+        if (x2 < 0 || y2 < 0)
+        {
+            Debug.Log("<0");
+            return false;
+        }
+
+        if (x2 >= Board.Instance.BoardSize || y2 >= Board.Instance.BoardSize)
+        {
+            Debug.Log(">5");
+            return false;
+        }
+
+        if (Board.Instance.IsCellEmpty(new Position(x2, y2)))
+        {
+            Debug.Log("occupied");
+            return false;
+        }
+
+        if (Board.Instance.Cells[x2, y2].Height - Board.Instance.Cells[x1, y1].Height > height)
+        {
+            Debug.Log("too high");
+            return false;
+        }
+
+        return true;
+    }
+
 
     public IEnumerator GetMoved(int distance, Rotation direction)
     {
@@ -64,6 +98,22 @@ public class a_BoardElement : MonoBehaviour
             Position = newPosition;
 
             yield return CourutineAnimations.Move(gameObject, Board.Instance[newPosition.X, newPosition.Y]);
+        }
+    }
+
+    public IEnumerator GetJumped(Rotation direction, int height)
+    {
+        Position newPosition = Position + new Position(direction.X, direction.Y);
+        if (IsAbleToJump(newPosition, height))
+        {
+            Board.Instance.UpdateOcuppiedCells(Position);
+            Board.Instance.UpdateOcuppiedCells(newPosition);
+            Board.Instance.Cells[Position.X, Position.Y].Element = null;
+            Board.Instance.Cells[newPosition.X, newPosition.Y].Element = this;
+
+            Position = newPosition;
+
+            yield return CourutineAnimations.Jump(gameObject, Board.Instance[newPosition.X, newPosition.Y], 0.75f);
         }
     }
 

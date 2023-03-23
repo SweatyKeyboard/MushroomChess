@@ -27,5 +27,6 @@ public enum ActionType
     Roll,
     MoveLeft,
     MoveRight,
-    Finish
+    Finish,
+    Throw
 }
