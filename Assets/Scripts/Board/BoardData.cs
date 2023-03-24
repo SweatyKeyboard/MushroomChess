@@ -3,7 +3,6 @@ using UnityEngine;
 
 [CreateAssetMenu]
 [System.Serializable]
-
 public class BoardData : ScriptableObject
 {
     [SerializeField] public int BoardSize = 5;
@@ -11,6 +10,8 @@ public class BoardData : ScriptableObject
 
     [SerializeField] public Position FinishPosition;
     [SerializeField] public List<UnitSpawnData> Units = new List<UnitSpawnData>();
+    [SerializeField] public List<ObjectSpawnData> Objects = new List<ObjectSpawnData>();
+    [SerializeField] public BoardColors BoardColors;
 
     private void OnEnable()
     {

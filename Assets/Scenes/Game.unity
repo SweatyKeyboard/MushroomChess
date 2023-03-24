@@ -174,6 +174,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b181b54960f2ecd448d96b0c471d6d80, type: 2}
   - {fileID: 11400000, guid: 27914459aa06d124892c9a30dcac8c1a, type: 2}
   - {fileID: 11400000, guid: acd3c657b599932448c1c1cce6ed5884, type: 2}
+  - {fileID: 11400000, guid: 1b0a60f36eb88c54286fbdd8526a9948, type: 2}
   _cellPrefab: {fileID: 6582688553319095668, guid: 90ce445f4b8b08341ad331571ab94d79,
     type: 3}
   _finishPrefab: {fileID: 5317053273964887104, guid: 0f5ed382fb2261f4685ecf9f9570890e,
@@ -436,9 +437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad510328604bd54da3d17e4a785bb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _elementMaterial: {fileID: 2100000, guid: 1d19849f715690b4b9f574ccb3b6df08, type: 2}
+  _objectMaterial: {fileID: 2100000, guid: 1d19849f715690b4b9f574ccb3b6df08, type: 2}
   _backgroundMaterial: {fileID: 2100000, guid: db21b96319d114246b0dbd947adc9f9b, type: 2}
-  _tilesMaterial: {fileID: 2100000, guid: 0af5ba8cfa407614599806c4a2570d03, type: 2}
+  _fieldMaterial: {fileID: 2100000, guid: 0af5ba8cfa407614599806c4a2570d03, type: 2}
 --- !u!1 &89150213
 GameObject:
   m_ObjectHideFlags: 0

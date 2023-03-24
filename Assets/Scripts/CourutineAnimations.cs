@@ -21,7 +21,7 @@ public static class CourutineAnimations
                 start.eulerAngles + new Vector3(0, angle, 0) * elapsed / duration);
             yield return null;
         }
-        StateChanger.Instance.TryChangeState(new StateUnitActing());
+        StateChanger.Instance.TryChangeState(new StateIdle());
     }
 
     public static IEnumerator Move(GameObject gameObject, Vector3 finishPosition, float duration = _animDuration)
@@ -36,7 +36,7 @@ public static class CourutineAnimations
             yield return null;
         }
         gameObject.transform.position = finishPosition;
-        StateChanger.Instance.TryChangeState(new StateUnitActing());
+        StateChanger.Instance.TryChangeState(new StateIdle());
     }
 
     public static IEnumerator Move(GameObject[] gameObjects, Vector3[] finishPositions, float duration = _animDuration)
@@ -68,7 +68,7 @@ public static class CourutineAnimations
         {
                 gameObjects[i].transform.position = finishPositions[i];
         }
-        StateChanger.Instance.TryChangeState(new StateUnitActing());
+        StateChanger.Instance.TryChangeState(new StateIdle());
     }
 
     public static IEnumerator Jump(GameObject gameObject, Vector3 finishPosition, float jumpHeight, float duration = _animDuration)
@@ -125,6 +125,6 @@ public static class CourutineAnimations
             yield return null;
         }
         gameObject.transform.position = finishPosition;
-        StateChanger.Instance.TryChangeState(new StateUnitActing());
+        StateChanger.Instance.TryChangeState(new StateIdle());
     }
 }

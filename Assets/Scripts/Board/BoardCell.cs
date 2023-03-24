@@ -6,14 +6,11 @@ public class BoardCell : MonoBehaviour
     [SerializeField] private MeshFilter[] _digits;
 
     private int _height;
-    //private List<a_CellModifier> _modifiers = new List<a_CellModifier>();
     public int Height
     {
         get => _height;
         set => _height = value;
     }
-
-    //public List<a_CellModifier> Modifiers => _modifiers;
 
     public a_BoardElement Element { get; set; }
 

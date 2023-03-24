@@ -15,3 +15,4 @@ MonoBehaviour:
   _name: Move Left
   _icon: {fileID: 21300000, guid: 91a5f7d6c0d89554089d17ae8aad10f3, type: 3}
   _action: 9
+  _hotkey: 113

@@ -15,6 +15,7 @@ public class UnitPanelElement : MonoBehaviour
     [SerializeField] private TMP_Text _jumpsCounter;
     [SerializeField] private TMP_Text _rotatesCounter;
     [SerializeField] private TMP_Text _specialCounter;
+    [SerializeField] private TMP_Text _hotKey;
 
     private int _index;
     private string _name;
@@ -24,8 +25,6 @@ public class UnitPanelElement : MonoBehaviour
     public int JumpsCount {get; private set;}
     public int RotatesCount {get; private set;}
     public int SpecialCount { get; private set; }
-
-    private Action[] _actions;
 
     public Image Background
     {
@@ -38,18 +37,27 @@ public class UnitPanelElement : MonoBehaviour
     public Sprite Label => _labels[_index];
 
     public event System.Action<int> Clicking;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown((_index+1).ToString()))
+        {
+            OnClicked();
+        }
+    }
+
     public void Set(a_Unit unit, int index, Sprite icon, string name, Action[] actions)
     {
         _index = index;
+        _hotKey.text = $"[{index+1}]";
         _icon.sprite = icon;
         _unit = unit;
-        _actions = actions;
         _label.sprite = _labels[index];
         _name = name;
 
         UpdateName();
 
-        _unit.Moving += OnMoved;
+        _unit.Moved += OnMoved;
     }
 
     private void OnMoved()

@@ -51,3 +51,8 @@ MonoBehaviour:
     <RotateAcionsCount>k__BackingField: 0
     <JumpAcionsCount>k__BackingField: 0
     <SpecialAcionsCount>k__BackingField: 1
+  Objects: []
+  BoardColors:
+    _background: {r: 0.4575472, g: 0.7859339, b: 1, a: 0}
+    _objects: {r: 0.9811321, g: 0.38412246, b: 0.389968, a: 0}
+    _field: {r: 0.8490566, g: 0.7899265, b: 0.56470275, a: 0}

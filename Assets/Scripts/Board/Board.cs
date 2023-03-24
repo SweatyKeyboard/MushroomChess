@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Board : MonoBehaviour
@@ -20,7 +21,7 @@ public class Board : MonoBehaviour
     private float _scale = 1f;
     public float StairScale = 0.1f;
 
-    private ColorRandomizer _colorRandomizer;
+    private ColorSetter _colorSetter;
     [SerializeField] private UnitPanel _unitPanel;
     public BoardCell[,] Cells => _cellPositions;
     public int LevelCount => _levels.Length;
@@ -31,6 +32,8 @@ public class Board : MonoBehaviour
         _cellPositions[i, j].transform.position.x,
         _cellPositions[i, j].transform.position.y + _scale * transform.localScale.y,
         _cellPositions[i, j].transform.position.z);
+
+    public List<ObjectWithData> ObjectsOnField { get; private set; } = new List<ObjectWithData>();
 
     private void Awake()
     {
@@ -47,15 +50,18 @@ public class Board : MonoBehaviour
         _cellPositions = new BoardCell[_boardSize, _boardSize];
         _occupiedCells = new bool[_boardSize, _boardSize];
 
-        _colorRandomizer = FindObjectOfType<ColorRandomizer>();
-        _colorRandomizer.RandomizeColor();
-
         _selectedLevel = FindObjectOfType<LevelSelector>().SelectedLevel;
         CreateFromFileData(_levels[_selectedLevel - 1]);
     }
 
     private void CreateFromFileData(BoardData data)
     {
+
+        _colorSetter = FindObjectOfType<ColorSetter>();
+        _colorSetter.SetBackgroundColor(data.BoardColors.Background);
+        _colorSetter.SetFieldColor(data.BoardColors.Field);
+        _colorSetter.SetObjectsColor(data.BoardColors.Objects);
+
         _boardSize = data.BoardSize;
         for (int i = 0; i < _boardSize; i++)
         {
@@ -71,6 +77,11 @@ public class Board : MonoBehaviour
         foreach (UnitSpawnData unitSpawnData in data.Units)
         {
             SpawnUnit(unitSpawnData);
+        }
+
+        foreach (ObjectSpawnData objectSpawnData in data.Objects)
+        {
+            SpawnObject(objectSpawnData);
         }
 
         transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
@@ -111,7 +122,7 @@ public class Board : MonoBehaviour
 
     private void ColorChesslike(int i, int j)
     {
-        Color tileColor = _colorRandomizer.TileColor;
+        Color tileColor = _colorSetter.TileColor;
         if (i % 2 == j % 2)
         {
             Cells[i, j].GetComponent<MeshRenderer>().material.color =
@@ -147,6 +158,27 @@ public class Board : MonoBehaviour
         UpdateOcuppiedCells(new Position(x, y));
 
         _unitPanel.AddUnit(newUnit, unitSpawnData);
+    }
+
+    private void SpawnObject(ObjectSpawnData objectSpawnData)
+    {
+        int x = objectSpawnData.Position.X;
+        int y = objectSpawnData.Position.Y;
+        a_BoardObject newObj = Instantiate(
+            objectSpawnData.ObjectData.Object,
+            this[x, y],
+            Quaternion.identity,
+            transform);
+
+        newObj.Position = new Position(x, y);
+        newObj.Rotation = new Rotation(objectSpawnData.Rotation.Angle);
+        newObj.transform.rotation = Quaternion.Euler(0, newObj.Rotation.Angle, 0);
+
+        Cells[x, y].Element = newObj;
+        UpdateOcuppiedCells(new Position(x, y));
+        newObj.SetDigit(objectSpawnData.ActsAfterTurn);
+
+        ObjectsOnField.Add(new ObjectWithData(newObj, objectSpawnData));
     }
 
     public bool IsCellEmpty(Position position)

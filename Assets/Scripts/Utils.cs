@@ -24,9 +24,11 @@ public enum ActionType
     LowerGround,
     Push,
     Run,
-    Roll,
+    Roll180,
     MoveLeft,
     MoveRight,
     Finish,
-    Throw
+    Throw,
+    RollLeft,
+    RollRight
 }

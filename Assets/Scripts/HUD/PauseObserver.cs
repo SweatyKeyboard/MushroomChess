@@ -6,7 +6,6 @@ public class PauseObserver : MonoBehaviour
     {
         foreach (IPauseHandler pauseObject in FindObjectsOfType<ButtonPauseHandler>())
         {
-            Debug.Log("paused");
             pauseObject.OnPause();
         }
     }

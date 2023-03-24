@@ -4,7 +4,7 @@ using UnityEngine;
 public abstract class a_Unit : a_BoardElement
 {
     [SerializeField] protected UnitMovingType _moving;
-    public event System.Action Moving;
+
 
     public override bool IsAbleToMove(Position position)
     {
@@ -30,7 +30,7 @@ public abstract class a_Unit : a_BoardElement
 
             yield return CourutineAnimations.Move(gameObject, Board.Instance[newPos.X, newPos.Y]);
         }
-        Moving?.Invoke();
+        Moved?.Invoke();
     }
 
     public IEnumerator MoveForward(int distance)
@@ -65,6 +65,6 @@ public abstract class a_Unit : a_BoardElement
 
             yield return CourutineAnimations.Jump(gameObject, Board.Instance[newPos.X, newPos.Y], height);
         }
-        Moving?.Invoke();
+        Moved?.Invoke();
     }
 }

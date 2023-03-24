@@ -7,10 +7,18 @@ public class ActionPanelElement : MonoBehaviour
     [SerializeField] private TMP_Text _name;
     [SerializeField] private Image _icon;
     [SerializeField] private TMP_Text _actionsLast;
+    [SerializeField] private TMP_Text _hotKeyText;
+    [SerializeField] private Image _actionTypeImage;
+
+    [Header("Images")]
+    [SerializeField] private Sprite _movingActionSprite;
+    [SerializeField] private Sprite _jumpingActionSprite;
+    [SerializeField] private Sprite _rotatingActionSprite;
+    [SerializeField] private Sprite _specialingActionSprite;
 
     private UnitPanelElement _unitPanel;
-
     private a_Action _action;
+    private KeyCode _hotkey;
     public ActionCategory Category { get; private set; }
 
     public a_Action Action => _action;
@@ -22,12 +30,22 @@ public class ActionPanelElement : MonoBehaviour
 
     public event System.Action Clicking;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(_hotkey))
+        {
+            AddToTurnList();
+        }
+    }
 
     public void Set(Action action, UnitPanelElement unit)
     {
         _unitPanel = unit;
         _icon.sprite = action.Icon;
         _name.text = action.Name;
+        _hotKeyText.text = $"[{action.Hotkey}]";
+        _hotkey = action.Hotkey;
+
 
         switch (action.ActionType)
         {
@@ -71,7 +89,7 @@ public class ActionPanelElement : MonoBehaviour
                 Category = ActionCategory.Moving;
                 break;
 
-            case ActionType.Roll:
+            case ActionType.Roll180:
                 _action = new ElementRotatingAction(_unitPanel.Unit, 180);
                 Category = ActionCategory.Specialing;
                 break;
@@ -96,6 +114,27 @@ public class ActionPanelElement : MonoBehaviour
                 Category = ActionCategory.Specialing;
                 break;
         }
+
+        switch (Category)
+        {
+            case ActionCategory.Moving:
+                _actionTypeImage.sprite = _movingActionSprite;
+                break;
+
+            case ActionCategory.Jumping:
+                _actionTypeImage.sprite = _jumpingActionSprite;
+                break;
+
+            case ActionCategory.Rotating:
+                _actionTypeImage.sprite = _rotatingActionSprite;
+                break;
+
+            case ActionCategory.Specialing:
+                _actionTypeImage.sprite = _specialingActionSprite;
+                break;
+        }
+
+
         UpdateCounter();
 
     }

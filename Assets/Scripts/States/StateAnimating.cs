@@ -7,7 +7,7 @@ public class StateAnimating : a_State
 
     public override a_State[] AllowedStatesToChange => new a_State[]
     {
-        new StateUnitActing()
+        new StateIdle()
     };
 
     public override void OnFinish()

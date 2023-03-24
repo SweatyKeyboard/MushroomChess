@@ -8,8 +8,17 @@ public class CameraRoll : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
+        CheckRoll();
+    }
+
+    private void CheckRoll()
+    {
+        if (StateChanger.Instance.State.GetType() != typeof(StateIdle))
+            return;
+
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {           
             if (++_currentIndex >= _cameraPositions.Length)
             {
                 _currentIndex = 0;
@@ -19,8 +28,8 @@ public class CameraRoll : MonoBehaviour
             StartCoroutine(RotateCamera(1f, -90));
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {            
             if (--_currentIndex < 0)
             {
                 _currentIndex = _cameraPositions.Length - 1;
@@ -33,6 +42,7 @@ public class CameraRoll : MonoBehaviour
 
     private IEnumerator MoveCamera(float duration)
     {
+        StateChanger.Instance.TryChangeState(new StateAnimating());
         float elapsed = 0;
         Vector3 start = Camera.main.transform.position;
         Vector3 finish = _cameraPositions[_currentIndex].position;
@@ -44,6 +54,7 @@ public class CameraRoll : MonoBehaviour
             yield return null;
         }
         Camera.main.transform.position = finish;
+        StateChanger.Instance.TryChangeState(new StateIdle());
     }
 
     private IEnumerator RotateCamera(float duration, float angle)

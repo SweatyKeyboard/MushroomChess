@@ -9,6 +9,11 @@ public class a_BoardElement : MonoBehaviour
 
     public BoardCell BoardCell => Board.Instance.Cells[Position.X, Position.Y];
     public BoardCell CellInFrontOf => Board.Instance.Cells[Position.X + Rotation.X, Position.Y + Rotation.Y];
+
+
+    public delegate void MovedDelegate();
+    public MovedDelegate Moved;
+
     protected void ChangeSelection()
     {
         _selected = !_selected;
@@ -98,6 +103,7 @@ public class a_BoardElement : MonoBehaviour
             Position = newPosition;
 
             yield return CourutineAnimations.Move(gameObject, Board.Instance[newPosition.X, newPosition.Y]);
+            Moved?.Invoke();
         }
     }
 
@@ -114,6 +120,7 @@ public class a_BoardElement : MonoBehaviour
             Position = newPosition;
 
             yield return CourutineAnimations.Jump(gameObject, Board.Instance[newPosition.X, newPosition.Y], 0.75f);
+            Moved?.Invoke();
         }
     }
 

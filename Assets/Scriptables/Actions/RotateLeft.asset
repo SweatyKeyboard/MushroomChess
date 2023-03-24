@@ -15,3 +15,4 @@ MonoBehaviour:
   _name: Rotate Left
   _icon: {fileID: 21300000, guid: 5c77b7109913df040adecefa4e9b807a, type: 3}
   _action: 2
+  _hotkey: 97
