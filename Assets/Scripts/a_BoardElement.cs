@@ -28,26 +28,26 @@ public class a_BoardElement : MonoBehaviour
 
         if (x2 < 0 || y2 < 0)
         {
-            Debug.Log("<0");
+            ErrorBanner.Instance.Show("Can't go beyond borders");
             return false;
         }
 
         if (x2 >= Board.Instance.BoardSize || y2 >= Board.Instance.BoardSize)
         {
-            Debug.Log(">5");
+            ErrorBanner.Instance.Show("Can't go beyond borders");
             return false;
         }
 
         if (Board.Instance.IsCellEmpty(new Position(x2, y2)))
         {
-            Debug.Log("occupied");
+            ErrorBanner.Instance.Show("Target cell isn't empty");
             return false;
         }
 
         if (Board.Instance.Cells[x2, y2].Height !=
             Board.Instance.Cells[x1, y1].Height)
         {
-            Debug.Log("not straight");
+            ErrorBanner.Instance.Show("Target cell has another height");
             return false;
         }
 
@@ -63,25 +63,25 @@ public class a_BoardElement : MonoBehaviour
 
         if (x2 < 0 || y2 < 0)
         {
-            Debug.Log("<0");
+            ErrorBanner.Instance.Show("Can't go beyond borders");
             return false;
         }
 
         if (x2 >= Board.Instance.BoardSize || y2 >= Board.Instance.BoardSize)
         {
-            Debug.Log(">5");
+            ErrorBanner.Instance.Show("Can't go beyond borders");
             return false;
         }
 
         if (Board.Instance.IsCellEmpty(new Position(x2, y2)))
         {
-            Debug.Log("occupied");
+            ErrorBanner.Instance.Show("Target cell isn't empty");
             return false;
         }
 
         if (Board.Instance.Cells[x2, y2].Height - Board.Instance.Cells[x1, y1].Height > height)
         {
-            Debug.Log("too high");
+            ErrorBanner.Instance.Show("Target cell is too high");
             return false;
         }
 
@@ -91,7 +91,7 @@ public class a_BoardElement : MonoBehaviour
 
     public IEnumerator GetMoved(int distance, Rotation direction)
     {
-        Position newPosition = Position + new Position(direction.X, direction.Y);
+        Position newPosition = Position + new Position(direction.X * distance, direction.Y * distance);
         if (IsAbleToMove(newPosition))
         {
 

@@ -72,7 +72,7 @@ public class TurnsPanel : MonoBehaviour
         }
         else
         {
-            Debug.Log("No more turns");
+            ErrorBanner.Instance.Show("No more turns");
             isSucceeded = false;
         }
     }
