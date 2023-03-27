@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,7 +22,17 @@ public class TurnsPanel : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            
+            StartActions();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            RemoveAction();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            ClearActions();
         }
     }
 
@@ -61,7 +72,7 @@ public class TurnsPanel : MonoBehaviour
         }
         else
         {
-            Debug.Log("No more turns");
+            ErrorBanner.Instance.Show("No more turns");
             isSucceeded = false;
         }
     }
@@ -76,7 +87,16 @@ public class TurnsPanel : MonoBehaviour
 
     private void StartActionsPrivate()
     {
-        StartCoroutine(ActionExecuter.Executor(TurnsList.Select(x => x.Action).ToList()));
+        List<a_Action> actionsList = TurnsList.Select(x => x.Action).ToList();
+        int actionsAdded = 0;
+        foreach (ObjectWithData obj in Board.Instance.ObjectsOnField)
+        {
+            actionsList.Insert(
+                obj.SpawnData.ActsAfterTurn + actionsAdded++,
+                ActionConverter.Convert(obj.Object, obj.SpawnData.ObjectData.Action));
+        }
+
+        StartCoroutine(ActionExecuter.Executor(actionsList));
         foreach (TurnPanelElement cell in _cells)
         {
             cell.Icon.sprite = _emptySprite;

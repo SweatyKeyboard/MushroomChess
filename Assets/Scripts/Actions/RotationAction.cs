@@ -1,5 +1,4 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 
 public class RotationAction : a_Action
 {

@@ -15,3 +15,4 @@ MonoBehaviour:
   _name: Lower Ground
   _icon: {fileID: 21300000, guid: f945e7dc698a3ac45a600deb4cedf1a4, type: 3}
   _action: 5
+  _hotkey: 115

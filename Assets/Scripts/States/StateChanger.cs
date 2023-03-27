@@ -10,7 +10,7 @@ public enum States
 
 public class StateChanger : MonoBehaviour
 {
-    public a_State State { get; set; } = new StateUnitPicking();
+    public a_State State { get; set; } = new StateIdle();
 
     public static StateChanger Instance;
     private void Awake()

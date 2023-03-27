@@ -22,5 +22,13 @@ public enum ActionType
     RotateRight,
     RaiseGround,
     LowerGround,
-    Push
+    Push,
+    Run,
+    Roll180,
+    MoveLeft,
+    MoveRight,
+    Finish,
+    Throw,
+    RollLeft,
+    RollRight
 }
