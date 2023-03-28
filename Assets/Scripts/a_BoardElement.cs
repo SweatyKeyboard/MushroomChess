@@ -10,9 +10,7 @@ public class a_BoardElement : MonoBehaviour
     public BoardCell BoardCell => Board.Instance.Cells[Position.X, Position.Y];
     public BoardCell CellInFrontOf => Board.Instance.Cells[Position.X + Rotation.X, Position.Y + Rotation.Y];
 
-
-    public delegate void MovedDelegate();
-    public MovedDelegate Moved;
+    public System.Action Moved;
 
     protected void ChangeSelection()
     {
@@ -28,26 +26,26 @@ public class a_BoardElement : MonoBehaviour
 
         if (x2 < 0 || y2 < 0)
         {
-            ErrorBanner.Instance.Show("Can't go beyond borders");
+            Banner.Instance.ShowError("Can't go beyond borders");
             return false;
         }
 
         if (x2 >= Board.Instance.BoardSize || y2 >= Board.Instance.BoardSize)
         {
-            ErrorBanner.Instance.Show("Can't go beyond borders");
+            Banner.Instance.ShowError("Can't go beyond borders");
             return false;
         }
 
         if (Board.Instance.IsCellEmpty(new Position(x2, y2)))
         {
-            ErrorBanner.Instance.Show("Target cell isn't empty");
+            Banner.Instance.ShowError("Target cell isn't empty");
             return false;
         }
 
         if (Board.Instance.Cells[x2, y2].Height !=
             Board.Instance.Cells[x1, y1].Height)
         {
-            ErrorBanner.Instance.Show("Target cell has another height");
+            Banner.Instance.ShowError("Target cell has another height");
             return false;
         }
 
@@ -63,25 +61,25 @@ public class a_BoardElement : MonoBehaviour
 
         if (x2 < 0 || y2 < 0)
         {
-            ErrorBanner.Instance.Show("Can't go beyond borders");
+            Banner.Instance.ShowError("Can't go beyond borders");
             return false;
         }
 
         if (x2 >= Board.Instance.BoardSize || y2 >= Board.Instance.BoardSize)
         {
-            ErrorBanner.Instance.Show("Can't go beyond borders");
+            Banner.Instance.ShowError("Can't go beyond borders");
             return false;
         }
 
         if (Board.Instance.IsCellEmpty(new Position(x2, y2)))
         {
-            ErrorBanner.Instance.Show("Target cell isn't empty");
+            Banner.Instance.ShowError("Target cell isn't empty");
             return false;
         }
 
         if (Board.Instance.Cells[x2, y2].Height - Board.Instance.Cells[x1, y1].Height > height)
         {
-            ErrorBanner.Instance.Show("Target cell is too high");
+            Banner.Instance.ShowError("Target cell is too high");
             return false;
         }
 

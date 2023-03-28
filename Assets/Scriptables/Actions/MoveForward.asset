@@ -16,3 +16,5 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: c71b3a08ec1a45a4f850465df63a3b12, type: 3}
   _action: 0
   _hotkey: 119
+  _hint: 'Move to the cell in front of you, if its height equals height of cell you
+    stay '

@@ -2,6 +2,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+[RequireComponent(typeof(Hintable))]
 public class ActionPanelElement : MonoBehaviour
 {
     [SerializeField] private TMP_Text _name;
@@ -20,6 +22,7 @@ public class ActionPanelElement : MonoBehaviour
     private a_Action _action;
     private KeyCode _hotkey;
     public ActionCategory Category { get; private set; }
+
 
     public a_Action Action => _action;
     public TMP_Text Name => _name;
@@ -45,7 +48,7 @@ public class ActionPanelElement : MonoBehaviour
         _name.text = action.Name;
         _hotKeyText.text = $"[{action.Hotkey}]";
         _hotkey = action.Hotkey;
-
+        GetComponent<Hintable>().Hint = action.Hint;
 
         switch (action.ActionType)
         {

@@ -16,3 +16,4 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: f945e7dc698a3ac45a600deb4cedf1a4, type: 3}
   _action: 5
   _hotkey: 115
+  _hint: Lower cell in front of you for 1 unit (with all elements on it))

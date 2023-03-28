@@ -32,3 +32,10 @@ public enum ActionType
     RollLeft,
     RollRight
 }
+
+public enum BannerClosingCondition
+{
+    Time,
+    Click,
+    LostHover
+}
