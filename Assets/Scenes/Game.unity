@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 29299213}
   - component: {fileID: 29299212}
   - component: {fileID: 29299215}
+  - component: {fileID: 29299216}
   m_Layer: 5
   m_Name: Banner
   m_TagString: Untagged
@@ -295,13 +296,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eae79d1ebaeff734bafdb5b439a699a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _pauseObserver: {fileID: 362844141}
   _errorText: {fileID: 1393684959}
   _background: {fileID: 29299213}
   _secondsForReadingOneLetter: 0.05
   _minimalDuration: 1
   _errorBanner: {fileID: 11400000, guid: 732b36cdeb674de479af3f2694ceaf4e, type: 2}
   _hintBanner: {fileID: 11400000, guid: 13004e2b54d4a1e4ab4c721e47a7ba28, type: 2}
-  _tutorialBanner: {fileID: 0}
+  _tutorialBanner: {fileID: 11400000, guid: 1f214e7f374084a41ad1ad4694572469, type: 2}
+--- !u!65 &29299216
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29299210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 547.15, y: 81.43, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &38502748
 GameObject:
   m_ObjectHideFlags: 0

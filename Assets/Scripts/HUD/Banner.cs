@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Banner : MonoBehaviour
 {
+    [SerializeField] private PauseObserver _pauseObserver;
     [SerializeField] private TMP_Text _errorText;
     [SerializeField] private Image _background;
 
@@ -51,6 +52,11 @@ public class Banner : MonoBehaviour
         OnTimerTick();
     }
 
+    private void OnMouseDown()
+    {
+        HideTutorial();
+    }
+
     private void OnTimerTick()
     {
         if (!_isTimerStarted)
@@ -88,6 +94,20 @@ public class Banner : MonoBehaviour
         if (_currentMessage.Type.ClosingCondition != BannerClosingCondition.LostHover)
             return;
 
+        CheckForNewMessages();
+    }
+
+    public void ShowTutorial(string text)
+    {
+        Show(text, _tutorialBanner);
+        _pauseObserver.Pause();
+    }
+    public void HideTutorial()
+    {
+        if (_currentMessage.Type.ClosingCondition != BannerClosingCondition.Click)
+            return;
+
+        _pauseObserver.Continue();
         CheckForNewMessages();
     }
 
@@ -130,7 +150,6 @@ public class Banner : MonoBehaviour
 
     public void Hide()
     {
-        Debug.Log("Hide");
         _animator.SetTrigger("Hide");
         _isAnimating = true;
         _isTimerStarted = false;
