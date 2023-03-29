@@ -50,73 +50,8 @@ public class ActionPanelElement : MonoBehaviour
         _hotkey = action.Hotkey;
         GetComponent<Hintable>().Hint = action.Hint;
 
-        switch (action.ActionType)
-        {
-            case ActionType.Jump:
-                _action = new JumpAction(_unitPanel.Unit, 1, 0.5f);
-                Category = ActionCategory.Jumping;
-                break;
-
-            case ActionType.MoveForward:
-                _action = new MoveForwardAction(_unitPanel.Unit, 1);
-                Category = ActionCategory.Moving;
-                break;
-
-            case ActionType.RotateLeft:
-                _action = new RotationAction(_unitPanel.Unit, -90);
-                Category = ActionCategory.Rotating;
-                break;
-
-            case ActionType.RotateRight:
-                _action = new RotationAction(_unitPanel.Unit, 90);
-                Category = ActionCategory.Rotating;
-                break;
-
-            case ActionType.LowerGround:
-                _action = new GroundMoveAction(_unitPanel.Unit, false);
-                Category = ActionCategory.Specialing;
-                break;
-
-            case ActionType.RaiseGround:
-                _action = new GroundMoveAction(_unitPanel.Unit, true);
-                Category = ActionCategory.Specialing;
-                break;
-
-            case ActionType.Push:
-                _action = new ElementMovingAction(_unitPanel.Unit, 1);
-                Category = ActionCategory.Specialing;
-                break;
-
-            case ActionType.Run:
-                _action = new MoveForwardAction(_unitPanel.Unit, 2);
-                Category = ActionCategory.Moving;
-                break;
-
-            case ActionType.Roll180:
-                _action = new ElementRotatingAction(_unitPanel.Unit, 180);
-                Category = ActionCategory.Specialing;
-                break;
-
-            case ActionType.MoveLeft:
-                _action = new MoveLeftAction(_unitPanel.Unit, 1);
-                Category = ActionCategory.Moving;
-                break;
-
-            case ActionType.MoveRight:
-                _action = new MoveRightAction(_unitPanel.Unit, 1);
-                Category = ActionCategory.Moving;
-                break;
-
-            case ActionType.Finish:
-                _action = new FinishLevelAction(_unitPanel.Unit);
-                Category = ActionCategory.Specialing;
-                break;
-
-            case ActionType.Throw:
-                _action = new ElementThrowingAction(_unitPanel.Unit, 2);
-                Category = ActionCategory.Specialing;
-                break;
-        }
+        _action = ActionConverter.Convert(unit.Unit, action);
+        Category = ActionConverter.GetCategory(action);
 
         switch (Category)
         {
