@@ -32,6 +32,8 @@ public class ActionPanelElement : MonoBehaviour
 
 
     public event System.Action Clicking;
+    public event System.Action<a_Unit> Removing;
+    public event System.Action<a_Unit> ActionsAreOver;
 
     private void Update()
     {
@@ -79,21 +81,28 @@ public class ActionPanelElement : MonoBehaviour
 
     public void UpdateCounter()
     {
+        int value = 0;
         switch (Category)
         {
             case ActionCategory.Moving:
-                _actionsLast.text = _unitPanel.MovesCount.ToString();
+                value = _unitPanel.MovesCount;
                 break;
             case ActionCategory.Rotating:
-                _actionsLast.text = _unitPanel.RotatesCount.ToString();
+                value = _unitPanel.RotatesCount;
                 break;
             case ActionCategory.Jumping:
-                _actionsLast.text = _unitPanel.JumpsCount.ToString();
+                value = _unitPanel.JumpsCount;
                 break;
             case ActionCategory.Specialing:
-                _actionsLast.text = _unitPanel.SpecialCount.ToString();
+                value = _unitPanel.SpecialCount;
                 break;
 
+        }
+        _actionsLast.text = value.ToString();
+
+        if (value == 0)
+        {
+            ActionsAreOver?.Invoke(_unitPanel.Unit);
         }
     }
 
@@ -182,6 +191,6 @@ public class ActionPanelElement : MonoBehaviour
                 _unitPanel.OnSpecialCanceled();
                 break;
         }
-        Clicking?.Invoke();
+        Removing?.Invoke(UnitPanel.Unit);
     }
 }

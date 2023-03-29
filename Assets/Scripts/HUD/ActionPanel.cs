@@ -22,6 +22,12 @@ public class ActionPanel : MonoBehaviour
             _actions.Add(newAction);
             newAction.gameObject.SetActive(false);
             newAction.Clicking += OnActionClick;
+            newAction.ActionsAreOver += ShowForUnit;
+            newAction.Removing += (unit) =>
+            {
+                ShowForUnit(unit);
+                OnActionClick();
+            };
         }
     }
 
@@ -36,7 +42,21 @@ public class ActionPanel : MonoBehaviour
     public void ShowForUnit(a_Unit unit)
     {
         HideForAll();
-        foreach (ActionPanelElement actionPanelElement in _actions.Where(x => x.UnitPanel.Unit == unit))
+
+        foreach (ActionPanelElement actionPanelElement in _actions.Where(x =>
+        {
+            bool isThisUnit = x.UnitPanel.Unit == unit;
+            int actionsInCategory = x.Category switch
+            {
+                ActionCategory.Moving => x.UnitPanel.MovesCount,
+                ActionCategory.Jumping => x.UnitPanel.JumpsCount,
+                ActionCategory.Rotating => x.UnitPanel.RotatesCount,
+                ActionCategory.Specialing => x.UnitPanel.SpecialCount,
+                _ => 0
+            };
+
+            return isThisUnit && actionsInCategory > 0;
+        }))
         {
             actionPanelElement.gameObject.SetActive(true);
         }
