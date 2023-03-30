@@ -20,7 +20,7 @@ public class UnitPanel : MonoBehaviour
         UnitPanelElement newUnit = Instantiate(
             _unitPanelElementPrefab,
             _contentField);
-        newUnit.Set(unit, _units.Count, spawnData.UnitData.Icon, spawnData.UnitData.Name,spawnData.UnitData.PossibleActions);
+        newUnit.Set(unit, _units.Count, spawnData.UnitData.Icon, spawnData.UnitData.Name);
         newUnit.SetActionsCount(spawnData);
         newUnit.Clicking += OnUnitSelected;
         _units.Add(newUnit);

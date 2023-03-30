@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -100,7 +99,6 @@ public class Banner : MonoBehaviour
     public void ShowTutorial(string text)
     {
         Show(text, _tutorialBanner);
-        _pauseObserver.Pause();
     }
     public void HideTutorial()
     {
@@ -145,6 +143,11 @@ public class Banner : MonoBehaviour
             _isTimerStarted = true;
             _duration = _currentMessage.Text.Length * _secondsForReadingOneLetter + _minimalDuration;
             _timer = 0f;
+        }
+        else
+        if (_currentMessage.Type.ClosingCondition == BannerClosingCondition.Click)
+        {
+            _pauseObserver.Pause();
         }
     }
 

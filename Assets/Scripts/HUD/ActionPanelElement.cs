@@ -20,6 +20,7 @@ public class ActionPanelElement : MonoBehaviour
 
     private UnitPanelElement _unitPanel;
     private a_Action _action;
+    private Action _actionData;
     private KeyCode _hotkey;
     public ActionCategory Category { get; private set; }
 
@@ -45,6 +46,7 @@ public class ActionPanelElement : MonoBehaviour
 
     public void Set(Action action, UnitPanelElement unit)
     {
+        _actionData = action;
         _unitPanel = unit;
         _icon.sprite = action.Icon;
         _name.text = action.Name;
@@ -163,10 +165,14 @@ public class ActionPanelElement : MonoBehaviour
         if (!isActionShouldBeDone)
             return;
 
-        bool isSucceeded;
-        TurnsPanel.Instance.AddAction(this, _icon.sprite, out isSucceeded);
-        if (isSucceeded)
+        
+        if (TurnsPanel.Instance.AddAction(this, _icon.sprite))
         {
+            if (Board.Instance.Tutorial != null)
+            {
+                TurnsPanel.Instance.AddTutorialAction(UnitPanel.Index, _actionData);
+            }
+
             Clicking?.Invoke();
         }
     }

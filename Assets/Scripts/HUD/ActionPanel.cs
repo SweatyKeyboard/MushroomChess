@@ -35,7 +35,10 @@ public class ActionPanel : MonoBehaviour
     {
         foreach (ActionPanelElement action in _actions)
         {
-            action.UpdateCounter();
+            if (action.isActiveAndEnabled)
+            {
+                action.UpdateCounter();
+            }
         }
     }
 

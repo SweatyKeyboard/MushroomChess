@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levels:
+  - {fileID: 11400000, guid: 164c541e494ab534e952347549262090, type: 2}
   - {fileID: 11400000, guid: 8ee58f304560540438e899aa7d98017c, type: 2}
   - {fileID: 11400000, guid: 4cecd6b5b00e6564b90857278a4a493a, type: 2}
   - {fileID: 11400000, guid: b181b54960f2ecd448d96b0c471d6d80, type: 2}
@@ -1083,7 +1084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &262230476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6730,6 +6731,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &513427315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513427316}
+  - component: {fileID: 513427317}
+  m_Layer: 0
+  m_Name: LevelSelectorWrap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &513427316
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513427315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1982474588}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &513427317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513427315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32d66a7db3ae0d408a3d4d1a36359c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &520038760
 GameObject:
   m_ObjectHideFlags: 0
@@ -6857,7 +6902,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2116457766}
+      - m_Target: {fileID: 513427317}
         m_TargetAssemblyTypeName: LevelSelectorWrap, Assembly-CSharp
         m_MethodName: NextLevel
         m_Mode: 1
@@ -10238,7 +10283,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2116457766}
+      - m_Target: {fileID: 513427317}
         m_TargetAssemblyTypeName: LevelSelectorWrap, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 1
@@ -10883,6 +10928,7 @@ Transform:
   m_Children:
   - {fileID: 1845241918}
   - {fileID: 72260453}
+  - {fileID: 513427316}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11204,7 +11250,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2116457766}
+      - m_Target: {fileID: 513427317}
         m_TargetAssemblyTypeName: LevelSelectorWrap, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 1
@@ -11373,7 +11419,6 @@ GameObject:
   - component: {fileID: 2116457765}
   - component: {fileID: 2116457764}
   - component: {fileID: 2116457763}
-  - component: {fileID: 2116457766}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -11431,15 +11476,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2116457766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2116457762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a32d66a7db3ae0d408a3d4d1a36359c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -12,6 +12,7 @@ public class BoardData : ScriptableObject
     [SerializeField] public List<UnitSpawnData> Units = new List<UnitSpawnData>();
     [SerializeField] public List<ObjectSpawnData> Objects = new List<ObjectSpawnData>();
     [SerializeField] public BoardColors BoardColors;
+    [SerializeField] public TutorialLevel TutorialInstructions;
 
     private void OnEnable()
     {

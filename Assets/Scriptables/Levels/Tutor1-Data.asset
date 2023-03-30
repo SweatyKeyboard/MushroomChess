@@ -1,0 +1,312 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc125a41db3b09c4bbaeb41fef0a6f43, type: 3}
+  m_Name: Tutor1-Data
+  m_EditorClassIdentifier: 
+  _eventsList:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: This is tutoral for Mushroom Chess. Click this banner
+            to continue
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Your goal is to get to the portal with Leady mushroom
+            using combinations of actions. But every turn you have to do exactly
+            5
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Click on the unit icon in the right menu, then select
+            move action all 5 times
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'Hint: hover mouse over the action for 2 seconds to read
+            about it'
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Well done. Have you seen alert message because you tried
+            to move beyond of borders?
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Be attent with this, because actions can burn like this
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Now rotate right, then jump 3 times and rotate right
+            again
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'Hint: You can rotate camera around board using left
+            and right arrows to see board better'
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Oh. Well. I forced you to lose action again...
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: But you can't jump this way as well. Change cells height
+            using these hard units, then  jump 3 cells forward
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'Hint: To distingush same units look at their coordinates'
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Ok. You're going well. Now it's time to harder part
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: You need to push Leady to the cell neihbored with finish,
+            but make it equal heights with Leady cell before
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: When Leady will be on the portal cell, finish the level
+            with special action
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'Hint: you can use horkeys, they showed at the bottom-left
+            corner of unit and action buttons'
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actions:
+  - _possibleTurnVariants:
+    - _actions:
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 296b1eea3e18b0a4d8f994a6128775e2, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 296b1eea3e18b0a4d8f994a6128775e2, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 296b1eea3e18b0a4d8f994a6128775e2, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 296b1eea3e18b0a4d8f994a6128775e2, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 296b1eea3e18b0a4d8f994a6128775e2, type: 2}
+  - _possibleTurnVariants:
+    - _actions:
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 3ab0f36902cbbfc4b8a32108adeba5aa, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 3ab0f36902cbbfc4b8a32108adeba5aa, type: 2}
+  - _possibleTurnVariants:
+    - _actions:
+      - _unitIndex: 1
+        _action: {fileID: 11400000, guid: f72defa3292a5c14c8de44db4db39140, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 4441fdd5882c1b54289171614e21ee55, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+    - _actions:
+      - _unitIndex: 1
+        _action: {fileID: 11400000, guid: f72defa3292a5c14c8de44db4db39140, type: 2}
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 4441fdd5882c1b54289171614e21ee55, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+    - _actions:
+      - _unitIndex: 1
+        _action: {fileID: 11400000, guid: f72defa3292a5c14c8de44db4db39140, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 4441fdd5882c1b54289171614e21ee55, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+    - _actions:
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 4441fdd5882c1b54289171614e21ee55, type: 2}
+      - _unitIndex: 1
+        _action: {fileID: 11400000, guid: f72defa3292a5c14c8de44db4db39140, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+  - _possibleTurnVariants:
+    - _actions:
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 1688139740a9f784280101acd910c99f, type: 2}
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: f72defa3292a5c14c8de44db4db39140, type: 2}
+      - _unitIndex: 3
+        _action: {fileID: 11400000, guid: 2b59bf168f1f59e4385ba5147dd9410c, type: 2}
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 2b59bf168f1f59e4385ba5147dd9410c, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 16dd2be7e86117443b522bbd8fc4d831, type: 2}

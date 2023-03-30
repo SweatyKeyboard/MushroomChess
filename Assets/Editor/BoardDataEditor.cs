@@ -11,7 +11,8 @@ public class BoardDataEditor : Editor
     private SerializedProperty _unitsPropperty;
     private SerializedProperty _objectsProperty;
     private SerializedProperty _finishPosPropperty;
-    private SerializedProperty _boardColors;
+    private SerializedProperty _boardColorsProperty;
+    private SerializedProperty _tutorialInstructionsProperty;
 
     private bool _isHeightMapShown;
 
@@ -23,7 +24,8 @@ public class BoardDataEditor : Editor
         _unitsPropperty = serializedObject.FindProperty("Units");
         _objectsProperty = serializedObject.FindProperty("Objects");
         _finishPosPropperty = serializedObject.FindProperty("FinishPosition");
-        _boardColors = serializedObject.FindProperty("BoardColors");
+        _boardColorsProperty = serializedObject.FindProperty("BoardColors");
+        _tutorialInstructionsProperty = serializedObject.FindProperty("TutorialInstructions");
     }
 
     public override void OnInspectorGUI()
@@ -31,7 +33,9 @@ public class BoardDataEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(_boardSizeProperty);
-        EditorGUILayout.PropertyField(_boardColors);
+        EditorGUILayout.PropertyField(_tutorialInstructionsProperty);
+
+        EditorGUILayout.PropertyField(_boardColorsProperty);
         _heightMapPropperty.arraySize = _boardSizeProperty.intValue * _boardSizeProperty.intValue;
 
         _isHeightMapShown = EditorGUILayout.BeginFoldoutHeaderGroup(_isHeightMapShown, "Height map");

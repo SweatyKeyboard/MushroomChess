@@ -17,7 +17,7 @@ public class UnitPanelElement : MonoBehaviour
     [SerializeField] private TMP_Text _specialCounter;
     [SerializeField] private TMP_Text _hotKey;
 
-    private int _index;
+    public int Index { get; private set; }
     private string _name;
     private a_Unit _unit;
 
@@ -34,21 +34,21 @@ public class UnitPanelElement : MonoBehaviour
 
     public a_Unit Unit => _unit;
 
-    public Sprite Label => _labels[_index];
+    public Sprite Label => _labels[Index];
 
     public event System.Action<int> Clicking;
 
     private void Update()
     {
-        if (Input.GetKeyDown((_index+1).ToString()))
+        if (Input.GetKeyDown((Index+1).ToString()))
         {
             OnClicked();
         }
     }
 
-    public void Set(a_Unit unit, int index, Sprite icon, string name, Action[] actions)
+    public void Set(a_Unit unit, int index, Sprite icon, string name)
     {
-        _index = index;
+        Index = index;
         _hotKey.text = $"[{index+1}]";
         _icon.sprite = icon;
         _unit = unit;
@@ -91,7 +91,7 @@ public class UnitPanelElement : MonoBehaviour
 
     public void OnClicked()
     {
-        Clicking?.Invoke(_index);
+        Clicking?.Invoke(Index);
     }
 
     public void OnMove()
