@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ff250c289cbe945a263bc3f8b5ca31, type: 3}
   m_Name: Finish
   m_EditorClassIdentifier: 
-  _name: Finish
+  _nameKey: act_finish
   _icon: {fileID: 21300000, guid: d089512e5d648384ab0600c2630df3fa, type: 3}
   _action: 11
   _hotkey: 102
-  _hint: Finishes the level if you stay on the portal cell
+  _hintKey: acth_finish

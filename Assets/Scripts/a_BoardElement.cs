@@ -26,26 +26,26 @@ public class a_BoardElement : MonoBehaviour
 
         if (x2 < 0 || y2 < 0)
         {
-            Banner.Instance.ShowError("Can't go beyond borders");
+            Banner.Instance.ShowError("err_beyondBorders");
             return false;
         }
 
         if (x2 >= Board.Instance.BoardSize || y2 >= Board.Instance.BoardSize)
         {
-            Banner.Instance.ShowError("Can't go beyond borders");
+            Banner.Instance.ShowError("err_beyondBorders");
             return false;
         }
 
         if (Board.Instance.IsCellEmpty(new Position(x2, y2)))
         {
-            Banner.Instance.ShowError("Target cell isn't empty");
+            Banner.Instance.ShowError("err_occupiedCell");
             return false;
         }
 
         if (Board.Instance.Cells[x2, y2].Height !=
             Board.Instance.Cells[x1, y1].Height)
         {
-            Banner.Instance.ShowError("Target cell has another height");
+            Banner.Instance.ShowError("err_notStraight");
             return false;
         }
 
@@ -61,25 +61,25 @@ public class a_BoardElement : MonoBehaviour
 
         if (x2 < 0 || y2 < 0)
         {
-            Banner.Instance.ShowError("Can't go beyond borders");
+            Banner.Instance.ShowError("err_beyondBorders");
             return false;
         }
 
         if (x2 >= Board.Instance.BoardSize || y2 >= Board.Instance.BoardSize)
         {
-            Banner.Instance.ShowError("Can't go beyond borders");
+            Banner.Instance.ShowError("err_beyondBorders");
             return false;
         }
 
         if (Board.Instance.IsCellEmpty(new Position(x2, y2)))
         {
-            Banner.Instance.ShowError("Target cell isn't empty");
+            Banner.Instance.ShowError("err_occupiedCell");
             return false;
         }
 
         if (Board.Instance.Cells[x2, y2].Height - Board.Instance.Cells[x1, y1].Height > height)
         {
-            Banner.Instance.ShowError("Target cell is too high");
+            Banner.Instance.ShowError("err_tooHigh");
             return false;
         }
 

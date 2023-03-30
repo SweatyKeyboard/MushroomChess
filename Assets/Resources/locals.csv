@@ -1,0 +1,47 @@
+key;ru;en
+but_play;Играть;Play
+but_back;Назад;Back
+but_backToMenu;Выход в меню;Back to menu
+but_continue;Продолжить;Continue
+but_restart;Заново;Restart
+but_nextLvl;Следующий;Next level
+txt_pause;Пауза;Pause
+txt_сomplete;Уровень пройден;Level complete
+err_beyondBorders;Дальше края нельзя;You can't go beyond the edge
+err_occupiedCell;Клетка уже занята;The cell is already occupied
+err_notStraight;Клетки имеют разную высоту;Cells have different heights
+err_tooHigh;Клетка слишком высоко;The cell is too high
+unit_craby;Крабби;Crabby
+unit_hardy;Харди;Hardy
+unit_leady;Лиди;Leady
+unit_tricky;Трики;Tricky
+act_finish;Завершить;Finish
+acth_finish;Успешно завершить уровень, при нахождении на портале;Successfully complete a level while in a portal
+act_jump;Прыгнуть;Jump
+acth_jump;Передвинуть юнит вперед на 1 клетку, если высота клетки перед ним не превышает высоту клетки юнита на высоту его прыжка;Move a unit forward for 1 cell if the height of the cell in front of it does not exceed the height of the unit's cell by the height of its jump
+act_lowerGround;Опустить клетку;Lower cell
+acth_lowerGround;Уменшает высоту клетки перед юнитом на 1;Decreases the height of the cell in front of the unit by 1
+act_raiseGround;Поднять клетку;Raise cell
+acth_raiseGround;Увеличивает высоту клетки перед юнитом на 1;Increases the height of the cell in front of the unit by 1
+act_moveForward;Идти вперед;Go forward
+acth_moveForward;Передвинуть юнит вперед на 1 клетку, если обе клетки находятся на одной высоте;Move unit forward for 1 cell if both cells are at the same height
+act_moveLeft;Идти влево;Go left
+acth_moveLeft;Передвинуть юнит влево на 1 клетку, если обе клетки находятся на одной высоте;Move unit left for 1 cell if both cells are at the same height
+act_moveRight;Идти вправр;Go right
+acth_moveRight;Передвинуть юнит вправо на 1 клетку, если обе клетки находятся на одной высоте;Move unit left for 1 cell if both cells are at the same height
+act_push;Толкнуть;Push
+acth_push;Толкает объект перед юнитом на 1 клетку вперед в направлении взгляда юнита, если обе клетки находятся на одной высоте;Pushes the object in front of the unit 1 cell forward in the direction the unit is looking, if both cells are at the same height
+act_roll180;Развернуть;Roll
+acth_roll180;Развернуть объект перед юнитом на 180 градусов;Rotate the object in front of the unit by 180 degrees
+act_rollLeft;Развернуть влево;Roll left
+acth_rollLeft;Развернуть объект перед юнитом на 90 градусов против часовой стрелки;Rotate the object in front of the unit 90 degrees counterclockwise
+act_rollRight;Развернуть вправо;Roll right
+acth_rollRight;Развернуть объект перед юнитом на 90 градусов по часовой стрелки;Rotate the object in front of the unit 90 degrees clockwise
+act_rotateLeft;Повернуться влево;Turn left
+acth_rotateLeft;Развернуть юнит на 90 градусов против часовой стрелки;Rotate unit 90 degrees counterclockwise
+act_rotateight;Повернуться вправо;Turn right
+acth_rotateRigt;Развернуть юнит на 90 градусов по часовой стрелки;Rotate unit 90 degrees clockwise
+act_run;Бежать;Run
+acth_run;Передвинуть юнит вперед ровно на 2 клетки, если все клетки находятся на одной высоте;Move unit forward exactly 2 cells if all cells are at the same height
+act_throw;Швырнуть;Throw
+acth_throw;Подкинуть объект перед юнитом на 1 клетку вперед в направлении взгляда юнита, если высота конечной клетки не превышает высоты клетки объекта на 2;Throw the object in front of the unit 1 cell forward in the direction the unit is looking, if the height of the target cell does not exceed the height of the object's cell by 2

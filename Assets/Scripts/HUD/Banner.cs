@@ -85,7 +85,7 @@ public class Banner : MonoBehaviour
 
     public void ShowHint(string text)
     {
-        Show(text, _hintBanner);
+        Show(text, _hintBanner);       
     }
 
     public void HideHint()
@@ -96,9 +96,9 @@ public class Banner : MonoBehaviour
         CheckForNewMessages();
     }
 
-    public void ShowTutorial(string text)
+    public void ShowTutorial(string key)
     {
-        Show(text, _tutorialBanner);
+        Show(Localizer.GetStringByKey(key), _tutorialBanner);
     }
     public void HideTutorial()
     {
@@ -109,9 +109,9 @@ public class Banner : MonoBehaviour
         CheckForNewMessages();
     }
 
-    public void ShowError(string text)
+    public void ShowError(string key)
     {
-        Show(text, _errorBanner);
+        Show(Localizer.GetStringByKey(key), _errorBanner);
     }
 
     public void Show(string text, BannerType bannerType)

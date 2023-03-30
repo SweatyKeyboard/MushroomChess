@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ff250c289cbe945a263bc3f8b5ca31, type: 3}
   m_Name: LowerGround
   m_EditorClassIdentifier: 
-  _name: Lower Ground
+  _nameKey: act_lowerGround
   _icon: {fileID: 21300000, guid: f945e7dc698a3ac45a600deb4cedf1a4, type: 3}
   _action: 5
   _hotkey: 115
-  _hint: Lower cell in front of you for 1 unit (with all elements on it))
+  _hintKey: acth_lowerGround
