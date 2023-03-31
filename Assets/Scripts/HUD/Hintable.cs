@@ -56,7 +56,6 @@ public class Hintable : MonoBehaviour
 
     private void OnMouseExit()
     {
-
         if (!_isHintShowed)
         {
             StopTimer();
@@ -65,5 +64,10 @@ public class Hintable : MonoBehaviour
         {
             _banner.HideHint();
         }
+    }
+
+    private void OnDisable()
+    {
+        _banner.HideHint();
     }
 }

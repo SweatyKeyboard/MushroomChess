@@ -19,7 +19,6 @@ public class ActionLimiterData
 
     public static bool operator !=(ActionLimiterData data1, ActionLimiterData data2)
     {
-        Debug.Log(data1._action.name + " / " + data2._action.name);
         return data1._unitIndex != data2._unitIndex || data1._action != data2._action;
     }
 }

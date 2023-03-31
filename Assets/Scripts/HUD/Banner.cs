@@ -72,9 +72,11 @@ public class Banner : MonoBehaviour
 
     private void CheckForNewMessages()
     {
+        Debug.Log("TryToHide");
         _isShowing = false;
         if (_messagesQueue.Count == 0)
         {
+            Debug.Log("Hiding");
             Hide();
         }
         else
@@ -85,12 +87,12 @@ public class Banner : MonoBehaviour
 
     public void ShowHint(string text)
     {
-        Show(text, _hintBanner);       
+        Show(text, _hintBanner);
     }
 
     public void HideHint()
     {
-        if (_currentMessage.Type.ClosingCondition != BannerClosingCondition.LostHover)
+        if (_currentMessage?.Type.ClosingCondition != BannerClosingCondition.LostHover)
             return;
 
         CheckForNewMessages();
@@ -102,8 +104,10 @@ public class Banner : MonoBehaviour
     }
     public void HideTutorial()
     {
-        if (_currentMessage.Type.ClosingCondition != BannerClosingCondition.Click)
+        Debug.Log("Hide tutorial?");
+        if (_currentMessage?.Type.ClosingCondition != BannerClosingCondition.Click)
             return;
+        Debug.Log("Hide tutorial!");
 
         _pauseObserver.Continue();
         CheckForNewMessages();
@@ -153,6 +157,7 @@ public class Banner : MonoBehaviour
 
     public void Hide()
     {
+        Debug.Log("Hiiiiide");
         _animator.SetTrigger("Hide");
         _isAnimating = true;
         _isTimerStarted = false;

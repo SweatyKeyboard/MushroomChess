@@ -158,7 +158,7 @@ public class TurnsPanel : MonoBehaviour
         else
         {
             ClearActions();
-            FindObjectOfType<Banner>().ShowTutorial("No. Try to make correct actions");
+            FindObjectOfType<Banner>().ShowTutorial("tut_wrongTurn");
         }
 
         TutorialTurnsList.Clear();

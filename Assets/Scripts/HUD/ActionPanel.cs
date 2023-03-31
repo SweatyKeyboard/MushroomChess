@@ -44,24 +44,26 @@ public class ActionPanel : MonoBehaviour
 
     public void ShowForUnit(a_Unit unit)
     {
-        HideForAll();
-
-        foreach (ActionPanelElement actionPanelElement in _actions.Where(x =>
+        foreach (ActionPanelElement actionPanelElement in _actions)
         {
-            bool isThisUnit = x.UnitPanel.Unit == unit;
-            int actionsInCategory = x.Category switch
+            int actionsInCategory = actionPanelElement.Category switch
             {
-                ActionCategory.Moving => x.UnitPanel.MovesCount,
-                ActionCategory.Jumping => x.UnitPanel.JumpsCount,
-                ActionCategory.Rotating => x.UnitPanel.RotatesCount,
-                ActionCategory.Specialing => x.UnitPanel.SpecialCount,
+                ActionCategory.Moving => actionPanelElement.UnitPanel.MovesCount,
+                ActionCategory.Jumping => actionPanelElement.UnitPanel.JumpsCount,
+                ActionCategory.Rotating => actionPanelElement.UnitPanel.RotatesCount,
+                ActionCategory.Specialing => actionPanelElement.UnitPanel.SpecialCount,
                 _ => 0
             };
 
-            return isThisUnit && actionsInCategory > 0;
-        }))
-        {
-            actionPanelElement.gameObject.SetActive(true);
+
+            if (actionPanelElement.UnitPanel.Unit == unit && actionsInCategory > 0)
+            {
+                actionPanelElement.gameObject.SetActive(true);
+            }
+            else
+            {
+                actionPanelElement.gameObject.SetActive(false);
+            }
         }
     }
 
