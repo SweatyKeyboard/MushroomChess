@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ff250c289cbe945a263bc3f8b5ca31, type: 3}
   m_Name: RaiseGround
   m_EditorClassIdentifier: 
-  _name: Raise Ground
+  _nameKey: act_raiseGround
   _icon: {fileID: 21300000, guid: ca3ab4cf7d14dd14dbebee6867b62210, type: 3}
   _action: 4
   _hotkey: 119
+  _hintKey: acth_raiseGround

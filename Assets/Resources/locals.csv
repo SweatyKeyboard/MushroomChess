@@ -1,0 +1,65 @@
+key;ru;en;
+but_play;Играть;Play;
+but_back;Назад;Back;
+but_backToMenu;Выход в меню;Back to menu;
+but_continue;Продолжить;Continue;
+but_restart;Заново;Restart;
+but_nextLvl;Следующий;Next level;
+txt_pause;Пауза;Pause;
+txt_сomplete;Уровень пройден;Level complete;
+err_beyondBorders;Дальше края нельзя;You can't go beyond the edge;
+err_occupiedCell;Клетка уже занята;The cell is already occupied;
+err_notStraight;Клетки имеют разную высоту;Cells have different heights;
+err_tooHigh;Клетка слишком высоко;The cell is too high;
+unit_craby;Крабби;Crabby;
+unit_hardy;Харди;Hardy;
+unit_leady;Лиди;Leady;
+unit_tricky;Трики;Tricky;
+act_finish;Завершить;Finish;
+acth_finish;Успешно завершить уровень, при нахождении на портале;Successfully complete a level while in a portal;
+act_jump;Прыгнуть;Jump;
+acth_jump;Передвинуть юнит вперед на 1 клетку, если высота клетки перед ним не превышает высоту клетки юнита на высоту его прыжка;Move a unit forward for 1 cell if the height of the cell in front of it does not exceed the height of the unit's cell by the height of its jump;
+act_lowerGround;Опустить клетку;Lower cell;
+acth_lowerGround;Уменшает высоту клетки перед юнитом на 1;Decreases the height of the cell in front of the unit by 1;
+act_raiseGround;Поднять клетку;Raise cell;
+acth_raiseGround;Увеличивает высоту клетки перед юнитом на 1;Increases the height of the cell in front of the unit by 1;
+act_moveForward;Идти вперед;Go forward;
+acth_moveForward;Передвинуть юнит вперед на 1 клетку, если обе клетки находятся на одной высоте;Move unit forward for 1 cell if both cells are at the same height;
+act_moveLeft;Идти влево;Go left;
+acth_moveLeft;Передвинуть юнит влево на 1 клетку, если обе клетки находятся на одной высоте;Move unit left for 1 cell if both cells are at the same height;
+act_moveRight;Идти вправр;Go right;
+acth_moveRight;Передвинуть юнит вправо на 1 клетку, если обе клетки находятся на одной высоте;Move unit left for 1 cell if both cells are at the same height;
+act_push;Толкнуть;Push;
+acth_push;Толкает объект перед юнитом на 1 клетку вперед в направлении взгляда юнита, если обе клетки находятся на одной высоте;Pushes the object in front of the unit 1 cell forward in the direction the unit is looking, if both cells are at the same height;
+act_roll180;Развернуть;Roll;
+acth_roll180;Развернуть объект перед юнитом на 180 градусов;Rotate the object in front of the unit by 180 degrees;
+act_rollLeft;Развернуть влево;Roll left;
+acth_rollLeft;Развернуть объект перед юнитом на 90 градусов против часовой стрелки;Rotate the object in front of the unit 90 degrees counterclockwise;
+act_rollRight;Развернуть вправо;Roll right;
+acth_rollRight;Развернуть объект перед юнитом на 90 градусов по часовой стрелки;Rotate the object in front of the unit 90 degrees clockwise;
+act_rotateLeft;Повернуться влево;Turn left;
+acth_rotateLeft;Развернуть юнит на 90 градусов против часовой стрелки;Rotate unit 90 degrees counterclockwise;
+act_rotateRight;Повернуться вправо;Turn right;
+acth_rotateRight;Развернуть юнит на 90 градусов по часовой стрелки;Rotate unit 90 degrees clockwise;
+act_run;Бежать;Run;
+acth_run;Передвинуть юнит вперед ровно на 2 клетки, если все клетки находятся на одной высоте;Move unit forward exactly 2 cells if all cells are at the same height;
+act_throw;Швырнуть;Throw;
+acth_throw;Подкинуть объект перед юнитом на 1 клетку вперед в направлении взгляда юнита, если высота конечной клетки не превышает высоты клетки объекта на 2;Throw the object in front of the unit 1 cell forward in the direction the unit is looking, if the height of the target cell does not exceed the height of the object's cell by 2;
+tut_wrongTurn;Не совсем. Походи сейчас, как я попросил. Ты еще успеешь обрести свободу в действиях;Not really. Make the turn now as I asked. You will still have time to gain freedom in action
+tut_111;Добро пожаловать в алгоритмическую головоломку Mushroom Chess, где тебе предстоит довести лидера грибов до портала. Нажми на этот баннер чтобы продолжить;Welcome to the algorithmic puzzle game Mushroom Chess where you have to guide the leader of the mushrooms to the portal. Click on this banner to continue;
+tut_112;Каждый уровень тебе нужно будет продумать и сделать ровно 5 действий на пути к финишу. Каждый уровень состоит из 3-5 таких ходов;Each level you will need to think over and do exactly 5 actions on the way to the finish line. Each level consists of 3-5 such moves;
+tut_113;Каждое действие относится к одной из 4 категорий: движение, поворот, прыжок, особенность. Количество доступных действий для каждой категории ограничено;Each action belongs to one of 4 categories: move, rotate, jump, special. The number of available actions for each category is limited;
+tut_114;Попробуй сейчас сделать 5 шагов вперёд. Выбери Лиди в панели справа, затем 5 раз кликни на действие ходьбы в панели слева;Try to take 5 steps forward now. Select Leady in the panel on the right, then 5 times click on the go action in the panel on the left;
+tut_115;Совет: наведи мышью на действие на 2 секунды, чтобы узнать о нем подробнее;Tip: Hover your mouse over an action for 2 seconds to learn more about it;
+tut_121;Отлично! Обрати внимание на то сообщение об ошибке. Я вынудил сделать тебя очевидно лишнее действие, и оно сгорело. Будь внимательнее с этим в реальной игре;Great! Pay attention to that error message. I forced you to do an obviously unnecessary action, and it burned down. Be careful with this in a real game;
+tut_122;Теперь попробуй повернуться вправо, прыгнуть 3 раза, а затем снова повернуться вправо;Now try to turn right, jump 3 times and then turn right again;
+tut_123;Совет: ты можешь вращать камеру вокруг поля используя стрелки влево и вправо;Tip: you can rotate the camera around the field using the left and right arrows;
+tut_131;Упс. Прости. Снова заставил тебя сжечь действие. Ничего страшного, на ошибках учатся;Oops. Sorry. Made you burn the action again. It's okay, learn from mistakes
+tut_132;Однако и сюда ты не сможешь запрыгнуть. Для этого необходимо опустить клетку перед тобой. Это может сделать Харди;However, you can't jump here either. To do this, you need to lower the cell in front of you. Hardy can do it
+tut_133;Лиди может прыгать только на клетки, которые не превышают высоту его клетки больше чем на 1. Поэтому клетку С3 следует поднять, чтобы с нее можно было прыгнуть дальше;Leady can only jump onto squares that do not exceed the height of his square by more than 1. Therefore, the C3 square must be raised so that it can jump further
+tut_134;Совет: чтобы различать одинаковых юнитов, смотри на их координаты. Также каждый юнит имеет уникальный символ, чтобы можно было различать их в списке действий этого хода;Tip: to distinguish between identical units, look at their coordinates. Also, each unit has a unique symbol so that you can distinguish them in the list of actions of this turn;
+tut_141;У тебя отлично получается! Настало время для более сложной части;You are doing great! It's time for the harder part;
+tut_142;Портал совсем близко, но у Лиди кончились действия передвижения и поворота. Эту проблему можно решить с помощью способности Харди - толчок;The portal is very close, but Leedy has run out of move and rotate actions. This problem can be solved with Hardy's ability - Push
+tut_143;Будь внимателен, чтобы толчок состоялся, клетка толкаемого объекта и клетка на которую его толкают, должны быть одинаковой высоты;Be careful. For the push to take place, the cell of the pushed object and the cell on which it is pushed must be of the same height;
+tut_144;Когда Лиди окажется на клетке с порталом, используй его спосбность завершения;When Leady is on the cell with ahe portal, use its finish ability;
+tut_145;Совет: ты можешь использовать горячие клавиши для выбора юнитов и действий, они отображены в левом нижнем углу соответствующей панели;Tip: you can use hotkeys to select units and actions, they are displayed in the lower left corner of the corresponding panel;

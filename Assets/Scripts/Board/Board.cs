@@ -26,6 +26,7 @@ public class Board : MonoBehaviour
     public BoardCell[,] Cells => _cellPositions;
     public int LevelCount => _levels.Length;
     public int BoardSize => _boardSize;
+    public TutorialLevel Tutorial { get; private set; }
     public Position FinishPosition { get; private set; }
     public static Board Instance;
     public Vector3 this[int i, int j] => new Vector3(
@@ -86,6 +87,13 @@ public class Board : MonoBehaviour
 
         transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         CreateFinish(data.FinishPosition);
+
+        Tutorial = data.TutorialInstructions ?? null;
+    }
+
+    private void Start()
+    {
+        Tutorial?.InvokeEventsForTurn(0);
     }
 
     private void CreateCell(int i, int j)
@@ -140,7 +148,7 @@ public class Board : MonoBehaviour
             j == 0);
     }
 
-    private void SpawnUnit(UnitSpawnData unitSpawnData)
+    public void SpawnUnit(UnitSpawnData unitSpawnData)
     {
         int x = unitSpawnData.Position.X;
         int y = unitSpawnData.Position.Y;

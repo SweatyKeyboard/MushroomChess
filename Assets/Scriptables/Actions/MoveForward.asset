@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ff250c289cbe945a263bc3f8b5ca31, type: 3}
   m_Name: MoveForward
   m_EditorClassIdentifier: 
-  _name: Move Forward
+  _nameKey: act_moveForward
   _icon: {fileID: 21300000, guid: c71b3a08ec1a45a4f850465df63a3b12, type: 3}
   _action: 0
   _hotkey: 119
+  _hintKey: acth_moveForward

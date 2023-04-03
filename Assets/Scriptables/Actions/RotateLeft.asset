@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ff250c289cbe945a263bc3f8b5ca31, type: 3}
   m_Name: RotateLeft
   m_EditorClassIdentifier: 
-  _name: Rotate Left
+  _nameKey: act_rotateLeft
   _icon: {fileID: 21300000, guid: 5c77b7109913df040adecefa4e9b807a, type: 3}
   _action: 2
   _hotkey: 97
+  _hintKey: acth_rotateLeft

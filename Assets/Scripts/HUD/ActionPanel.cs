@@ -22,6 +22,12 @@ public class ActionPanel : MonoBehaviour
             _actions.Add(newAction);
             newAction.gameObject.SetActive(false);
             newAction.Clicking += OnActionClick;
+            newAction.ActionsAreOver += ShowForUnit;
+            newAction.Removing += (unit) =>
+            {
+                ShowForUnit(unit);
+                OnActionClick();
+            };
         }
     }
 
@@ -29,16 +35,35 @@ public class ActionPanel : MonoBehaviour
     {
         foreach (ActionPanelElement action in _actions)
         {
-            action.UpdateCounter();
+            if (action.isActiveAndEnabled)
+            {
+                action.UpdateCounter();
+            }
         }
     }
 
     public void ShowForUnit(a_Unit unit)
     {
-        HideForAll();
-        foreach (ActionPanelElement actionPanelElement in _actions.Where(x => x.UnitPanel.Unit == unit))
+        foreach (ActionPanelElement actionPanelElement in _actions)
         {
-            actionPanelElement.gameObject.SetActive(true);
+            int actionsInCategory = actionPanelElement.Category switch
+            {
+                ActionCategory.Moving => actionPanelElement.UnitPanel.MovesCount,
+                ActionCategory.Jumping => actionPanelElement.UnitPanel.JumpsCount,
+                ActionCategory.Rotating => actionPanelElement.UnitPanel.RotatesCount,
+                ActionCategory.Specialing => actionPanelElement.UnitPanel.SpecialCount,
+                _ => 0
+            };
+
+
+            if (actionPanelElement.UnitPanel.Unit == unit && actionsInCategory > 0)
+            {
+                actionPanelElement.gameObject.SetActive(true);
+            }
+            else
+            {
+                actionPanelElement.gameObject.SetActive(false);
+            }
         }
     }
 

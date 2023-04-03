@@ -1,0 +1,326 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc125a41db3b09c4bbaeb41fef0a6f43, type: 3}
+  m_Name: Tutor1-Data
+  m_EditorClassIdentifier: 
+  _eventsList:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_111
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_112
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_113
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_114
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_115
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_121
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_122
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_123
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_131
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_132
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_133
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_134
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_141
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_142
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_143
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_144
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 168893378378337018, guid: 1df7cbb5bd32179469d2b45f7457a431,
+          type: 3}
+        m_TargetAssemblyTypeName: TutorialLevelManager, Assembly-CSharp
+        m_MethodName: ShowTutorial
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: tut_145
+          m_BoolArgument: 0
+        m_CallState: 2
+  _actions:
+  - _possibleTurnVariants:
+    - _actions:
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 296b1eea3e18b0a4d8f994a6128775e2, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 296b1eea3e18b0a4d8f994a6128775e2, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 296b1eea3e18b0a4d8f994a6128775e2, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 296b1eea3e18b0a4d8f994a6128775e2, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 296b1eea3e18b0a4d8f994a6128775e2, type: 2}
+  - _possibleTurnVariants:
+    - _actions:
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 3ab0f36902cbbfc4b8a32108adeba5aa, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 3ab0f36902cbbfc4b8a32108adeba5aa, type: 2}
+  - _possibleTurnVariants:
+    - _actions:
+      - _unitIndex: 1
+        _action: {fileID: 11400000, guid: f72defa3292a5c14c8de44db4db39140, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 4441fdd5882c1b54289171614e21ee55, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+    - _actions:
+      - _unitIndex: 1
+        _action: {fileID: 11400000, guid: f72defa3292a5c14c8de44db4db39140, type: 2}
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 4441fdd5882c1b54289171614e21ee55, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+    - _actions:
+      - _unitIndex: 1
+        _action: {fileID: 11400000, guid: f72defa3292a5c14c8de44db4db39140, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 4441fdd5882c1b54289171614e21ee55, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+    - _actions:
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 4441fdd5882c1b54289171614e21ee55, type: 2}
+      - _unitIndex: 1
+        _action: {fileID: 11400000, guid: f72defa3292a5c14c8de44db4db39140, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 871f9c03a20f5024b99f03552fcb5c3e, type: 2}
+  - _possibleTurnVariants:
+    - _actions:
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 1688139740a9f784280101acd910c99f, type: 2}
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 4441fdd5882c1b54289171614e21ee55, type: 2}
+      - _unitIndex: 3
+        _action: {fileID: 11400000, guid: 2b59bf168f1f59e4385ba5147dd9410c, type: 2}
+      - _unitIndex: 2
+        _action: {fileID: 11400000, guid: 2b59bf168f1f59e4385ba5147dd9410c, type: 2}
+      - _unitIndex: 0
+        _action: {fileID: 11400000, guid: 16dd2be7e86117443b522bbd8fc4d831, type: 2}

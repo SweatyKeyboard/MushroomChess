@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ff250c289cbe945a263bc3f8b5ca31, type: 3}
   m_Name: MoveRight
   m_EditorClassIdentifier: 
-  _name: Move Right
+  _nameKey: act_moveRight
   _icon: {fileID: 21300000, guid: 91a5f7d6c0d89554089d17ae8aad10f3, type: 3}
   _action: 10
   _hotkey: 101
+  _hintKey: acth_moveRight

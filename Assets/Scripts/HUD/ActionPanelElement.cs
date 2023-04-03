@@ -2,6 +2,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+[RequireComponent(typeof(Hintable))]
 public class ActionPanelElement : MonoBehaviour
 {
     [SerializeField] private TMP_Text _name;
@@ -18,8 +20,10 @@ public class ActionPanelElement : MonoBehaviour
 
     private UnitPanelElement _unitPanel;
     private a_Action _action;
+    private Action _actionData;
     private KeyCode _hotkey;
     public ActionCategory Category { get; private set; }
+
 
     public a_Action Action => _action;
     public TMP_Text Name => _name;
@@ -29,6 +33,8 @@ public class ActionPanelElement : MonoBehaviour
 
 
     public event System.Action Clicking;
+    public event System.Action<a_Unit> Removing;
+    public event System.Action<a_Unit> ActionsAreOver;
 
     private void Update()
     {
@@ -40,80 +46,16 @@ public class ActionPanelElement : MonoBehaviour
 
     public void Set(Action action, UnitPanelElement unit)
     {
+        _actionData = action;
         _unitPanel = unit;
         _icon.sprite = action.Icon;
         _name.text = action.Name;
         _hotKeyText.text = $"[{action.Hotkey}]";
         _hotkey = action.Hotkey;
+        GetComponent<Hintable>().Hint = action.Hint;
 
-
-        switch (action.ActionType)
-        {
-            case ActionType.Jump:
-                _action = new JumpAction(_unitPanel.Unit, 1, 0.5f);
-                Category = ActionCategory.Jumping;
-                break;
-
-            case ActionType.MoveForward:
-                _action = new MoveForwardAction(_unitPanel.Unit, 1);
-                Category = ActionCategory.Moving;
-                break;
-
-            case ActionType.RotateLeft:
-                _action = new RotationAction(_unitPanel.Unit, -90);
-                Category = ActionCategory.Rotating;
-                break;
-
-            case ActionType.RotateRight:
-                _action = new RotationAction(_unitPanel.Unit, 90);
-                Category = ActionCategory.Rotating;
-                break;
-
-            case ActionType.LowerGround:
-                _action = new GroundMoveAction(_unitPanel.Unit, false);
-                Category = ActionCategory.Specialing;
-                break;
-
-            case ActionType.RaiseGround:
-                _action = new GroundMoveAction(_unitPanel.Unit, true);
-                Category = ActionCategory.Specialing;
-                break;
-
-            case ActionType.Push:
-                _action = new ElementMovingAction(_unitPanel.Unit, 1);
-                Category = ActionCategory.Specialing;
-                break;
-
-            case ActionType.Run:
-                _action = new MoveForwardAction(_unitPanel.Unit, 2);
-                Category = ActionCategory.Moving;
-                break;
-
-            case ActionType.Roll180:
-                _action = new ElementRotatingAction(_unitPanel.Unit, 180);
-                Category = ActionCategory.Specialing;
-                break;
-
-            case ActionType.MoveLeft:
-                _action = new MoveLeftAction(_unitPanel.Unit, 1);
-                Category = ActionCategory.Moving;
-                break;
-
-            case ActionType.MoveRight:
-                _action = new MoveRightAction(_unitPanel.Unit, 1);
-                Category = ActionCategory.Moving;
-                break;
-
-            case ActionType.Finish:
-                _action = new FinishLevelAction(_unitPanel.Unit);
-                Category = ActionCategory.Specialing;
-                break;
-
-            case ActionType.Throw:
-                _action = new ElementThrowingAction(_unitPanel.Unit, 2);
-                Category = ActionCategory.Specialing;
-                break;
-        }
+        _action = ActionConverter.Convert(unit.Unit, action);
+        Category = ActionConverter.GetCategory(action);
 
         switch (Category)
         {
@@ -141,21 +83,28 @@ public class ActionPanelElement : MonoBehaviour
 
     public void UpdateCounter()
     {
+        int value = 0;
         switch (Category)
         {
             case ActionCategory.Moving:
-                _actionsLast.text = _unitPanel.MovesCount.ToString();
+                value = _unitPanel.MovesCount;
                 break;
             case ActionCategory.Rotating:
-                _actionsLast.text = _unitPanel.RotatesCount.ToString();
+                value = _unitPanel.RotatesCount;
                 break;
             case ActionCategory.Jumping:
-                _actionsLast.text = _unitPanel.JumpsCount.ToString();
+                value = _unitPanel.JumpsCount;
                 break;
             case ActionCategory.Specialing:
-                _actionsLast.text = _unitPanel.SpecialCount.ToString();
+                value = _unitPanel.SpecialCount;
                 break;
 
+        }
+        _actionsLast.text = value.ToString();
+
+        if (value == 0)
+        {
+            ActionsAreOver?.Invoke(_unitPanel.Unit);
         }
     }
 
@@ -216,10 +165,14 @@ public class ActionPanelElement : MonoBehaviour
         if (!isActionShouldBeDone)
             return;
 
-        bool isSucceeded;
-        TurnsPanel.Instance.AddAction(this, _icon.sprite, out isSucceeded);
-        if (isSucceeded)
+        
+        if (TurnsPanel.Instance.AddAction(this, _icon.sprite))
         {
+            if (Board.Instance.Tutorial != null)
+            {
+                TurnsPanel.Instance.AddTutorialAction(UnitPanel.Index, _actionData);
+            }
+
             Clicking?.Invoke();
         }
     }
@@ -244,6 +197,6 @@ public class ActionPanelElement : MonoBehaviour
                 _unitPanel.OnSpecialCanceled();
                 break;
         }
-        Clicking?.Invoke();
+        Removing?.Invoke(UnitPanel.Unit);
     }
 }

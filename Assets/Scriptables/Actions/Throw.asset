@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ff250c289cbe945a263bc3f8b5ca31, type: 3}
   m_Name: Throw
   m_EditorClassIdentifier: 
-  _name: Throw
+  _nameKey: act_throw
   _icon: {fileID: 21300000, guid: c06e88fc557c8b243a737245df60182c, type: 3}
   _action: 12
   _hotkey: 32
+  _hintKey: acth_throw
