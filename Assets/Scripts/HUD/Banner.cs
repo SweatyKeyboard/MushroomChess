@@ -72,11 +72,9 @@ public class Banner : MonoBehaviour
 
     private void CheckForNewMessages()
     {
-        Debug.Log("TryToHide");
         _isShowing = false;
         if (_messagesQueue.Count == 0)
         {
-            Debug.Log("Hiding");
             Hide();
         }
         else
@@ -104,10 +102,8 @@ public class Banner : MonoBehaviour
     }
     public void HideTutorial()
     {
-        Debug.Log("Hide tutorial?");
         if (_currentMessage?.Type.ClosingCondition != BannerClosingCondition.Click)
             return;
-        Debug.Log("Hide tutorial!");
 
         _pauseObserver.Continue();
         CheckForNewMessages();
@@ -126,10 +122,24 @@ public class Banner : MonoBehaviour
 
     public void Show()
     {
+        string queue = "";
+        foreach (BannerOption option in _messagesQueue)
+        {
+            queue += option.Text + "(" + option.Type.ClosingCondition.ToString() + ")\n";
+        }
+        Debug.Log(queue);
+
+
         if (_isShowing)
+        {
+            Debug.Log("Dropped because of showing");
             return;
+        }
         if (_isAnimating)
+        {
+            Debug.Log("Dropped because of animating");
             return;
+        }
 
         if (!_isAlreadyVisible)
         {
@@ -157,10 +167,13 @@ public class Banner : MonoBehaviour
 
     public void Hide()
     {
-        Debug.Log("Hiiiiide");
-        _animator.SetTrigger("Hide");
-        _isAnimating = true;
-        _isTimerStarted = false;
+        if (!_isAnimating)
+        {
+            _animator.SetTrigger("Hide");
+            _isAnimating = true;
+            _isTimerStarted = false;
+            Debug.Log("Hide... - " + _isAnimating);
+        }
     }
 
     public void FinishHideAnimation()
@@ -168,8 +181,11 @@ public class Banner : MonoBehaviour
         _isAnimating = false;
         _isAlreadyVisible = false;
 
+        Debug.Log("FINISHED - " + _isAnimating);
         if (_messagesQueue.Count > 0)
         {
+            Debug.Log("Repeated");
+
             Show();
         }
     }

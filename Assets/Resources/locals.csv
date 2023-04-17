@@ -7,10 +7,12 @@ but_restart;Заново;Restart;
 but_nextLvl;Следующий;Next level;
 txt_pause;Пауза;Pause;
 txt_сomplete;Уровень пройден;Level complete;
+txt_lang;Язык;Language;
 err_beyondBorders;Дальше края нельзя;You can't go beyond the edge;
 err_occupiedCell;Клетка уже занята;The cell is already occupied;
 err_notStraight;Клетки имеют разную высоту;Cells have different heights;
 err_tooHigh;Клетка слишком высоко;The cell is too high;
+err_5actions;Необходимо запланировать ровно 5 действий;You need to select exactly 5 actions;
 unit_craby;Крабби;Crabby;
 unit_hardy;Харди;Hardy;
 unit_leady;Лиди;Leady;
@@ -36,11 +38,11 @@ acth_roll180;Развернуть объект перед юнитом на 180 
 act_rollLeft;Развернуть влево;Roll left;
 acth_rollLeft;Развернуть объект перед юнитом на 90 градусов против часовой стрелки;Rotate the object in front of the unit 90 degrees counterclockwise;
 act_rollRight;Развернуть вправо;Roll right;
-acth_rollRight;Развернуть объект перед юнитом на 90 градусов по часовой стрелки;Rotate the object in front of the unit 90 degrees clockwise;
+acth_rollRight;Развернуть объект перед юнитом на 90 градусов по часовой стрелке;Rotate the object in front of the unit 90 degrees clockwise;
 act_rotateLeft;Повернуться влево;Turn left;
 acth_rotateLeft;Развернуть юнит на 90 градусов против часовой стрелки;Rotate unit 90 degrees counterclockwise;
 act_rotateRight;Повернуться вправо;Turn right;
-acth_rotateRight;Развернуть юнит на 90 градусов по часовой стрелки;Rotate unit 90 degrees clockwise;
+acth_rotateRight;Развернуть юнит на 90 градусов по часовой стрелке;Rotate unit 90 degrees clockwise;
 act_run;Бежать;Run;
 acth_run;Передвинуть юнит вперед ровно на 2 клетки, если все клетки находятся на одной высоте;Move unit forward exactly 2 cells if all cells are at the same height;
 act_throw;Швырнуть;Throw;
@@ -56,10 +58,11 @@ tut_122;Теперь попробуй повернуться вправо, пр�
 tut_123;Совет: ты можешь вращать камеру вокруг поля используя стрелки влево и вправо;Tip: you can rotate the camera around the field using the left and right arrows;
 tut_131;Упс. Прости. Снова заставил тебя сжечь действие. Ничего страшного, на ошибках учатся;Oops. Sorry. Made you burn the action again. It's okay, learn from mistakes
 tut_132;Однако и сюда ты не сможешь запрыгнуть. Для этого необходимо опустить клетку перед тобой. Это может сделать Харди;However, you can't jump here either. To do this, you need to lower the cell in front of you. Hardy can do it
-tut_133;Лиди может прыгать только на клетки, которые не превышают высоту его клетки больше чем на 1. Поэтому клетку С3 следует поднять, чтобы с нее можно было прыгнуть дальше;Leady can only jump onto squares that do not exceed the height of his square by more than 1. Therefore, the C3 square must be raised so that it can jump further
+tut_133;Лиди может прыгать только на клетки, которые не превышают высоту его клетки больше чем на 1. Поэтому клетку С4 следует опустить на 1, а клетку C3 поднять на 1, чтобы пропрыгать дальше;Leady can only jump onto squares that do not exceed the height of his cell by more than 1. Therefore, C4 must be lowered by 1 and C3 must be raised by 1 to jump further;
 tut_134;Совет: чтобы различать одинаковых юнитов, смотри на их координаты. Также каждый юнит имеет уникальный символ, чтобы можно было различать их в списке действий этого хода;Tip: to distinguish between identical units, look at their coordinates. Also, each unit has a unique symbol so that you can distinguish them in the list of actions of this turn;
 tut_141;У тебя отлично получается! Настало время для более сложной части;You are doing great! It's time for the harder part;
 tut_142;Портал совсем близко, но у Лиди кончились действия передвижения и поворота. Эту проблему можно решить с помощью способности Харди - толчок;The portal is very close, but Leedy has run out of move and rotate actions. This problem can be solved with Hardy's ability - Push
 tut_143;Будь внимателен, чтобы толчок состоялся, клетка толкаемого объекта и клетка на которую его толкают, должны быть одинаковой высоты;Be careful. For the push to take place, the cell of the pushed object and the cell on which it is pushed must be of the same height;
-tut_144;Когда Лиди окажется на клетке с порталом, используй его спосбность завершения;When Leady is on the cell with ahe portal, use its finish ability;
-tut_145;Совет: ты можешь использовать горячие клавиши для выбора юнитов и действий, они отображены в левом нижнем углу соответствующей панели;Tip: you can use hotkeys to select units and actions, they are displayed in the lower left corner of the corresponding panel;
+tut_144;Подними клетку D2 с помощью Харди на D3 (не забудь повернуться). Затем Харди на B2 толкнет Лиди. После чего Харди на D3 толкнет Лиди на финишную клетку;Raise cell D2 with Hardy on D3 (don't forget to turn around). Then Hardy on B2 pushes Lidy. Then Hardy on D3 push Lidy to the finish cell
+tut_145;Когда Лиди окажется на клетке с порталом, используй его спосбность завершения;When Leady is on the cell with ahe portal, use its finish ability;
+tut_146;Совет: ты можешь использовать горячие клавиши для выбора юнитов и действий, они отображены в левом нижнем углу соответствующей панели;Tip: you can use hotkeys to select units and actions, they are displayed in the lower left corner of the corresponding panel;

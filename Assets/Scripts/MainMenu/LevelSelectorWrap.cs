@@ -24,4 +24,9 @@ public class LevelSelectorWrap : MonoBehaviour
         LevelStatisticsCounter.TurnsCount = 0;
         _levelSelector.GoToLevel(_levelSelector.SelectedLevel + 1);
     }
+
+    public void Quit()
+    {
+        _levelSelector.Quit();
+    }
 }

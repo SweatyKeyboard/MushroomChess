@@ -13,9 +13,17 @@ public class TurnsPanel : MonoBehaviour
     public static TurnsPanel Instance;
     public List<ActionPanelElement> TurnsList { get; set; } = new List<ActionPanelElement>();
     public List<ActionLimiterData> TutorialTurnsList { get; set; } = new List<ActionLimiterData>();
+
+    private Banner _banner;
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        _banner = FindObjectOfType<Banner>();
     }
 
     private void Update()
@@ -100,6 +108,10 @@ public class TurnsPanel : MonoBehaviour
         {
             StartActionsPrivate();
         }
+        else
+        {
+            _banner.ShowError("err_5actions");
+        }
     }
 
     private void TurnEnd()
@@ -142,6 +154,7 @@ public class TurnsPanel : MonoBehaviour
             int actionsAdded = 0;
             foreach (ObjectWithData obj in Board.Instance.ObjectsOnField)
             {
+                Debug.Log(obj.SpawnData.ActsAfterTurn + actionsAdded);
                 actionsList.Insert(
                     obj.SpawnData.ActsAfterTurn + actionsAdded++,
                     ActionConverter.Convert(obj.Object, obj.SpawnData.ObjectData.Action));

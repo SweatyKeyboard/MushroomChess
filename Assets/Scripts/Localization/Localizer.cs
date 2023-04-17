@@ -3,7 +3,7 @@ using UnityEngine;
 
 public static class Localizer
 {
-    private static string[] _allowedLanguages = { "ru", "en" };
+    private static string[] _allowedLanguages = { "ru", "en", "tr" };
     private static string _selectedLanguage = "ru";
 
     public static string SelectedLanguage

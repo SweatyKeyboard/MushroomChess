@@ -51,17 +51,21 @@ public class Hintable : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        Debug.Log("Enter");
         StartTimer();
     }
 
     private void OnMouseExit()
     {
+        Debug.Log("Exit");
         if (!_isHintShowed)
         {
+            Debug.Log("Stopped");
             StopTimer();
         }
         else
         {
+            Debug.Log("Hidden");
             _banner.HideHint();
         }
     }
