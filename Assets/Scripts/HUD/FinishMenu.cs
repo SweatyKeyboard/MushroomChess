@@ -8,6 +8,6 @@ public class FinishMenu : a_Menu
     {
         base.Show();
 
-        _nextLevelButton.enabled = FindObjectOfType<LevelSelector>().SelectedLevel != Board.Instance.LevelCount;
+        _nextLevelButton.interactable = FindObjectOfType<LevelSelector>().SelectedLevel != Board.Instance.LevelCount;
     }
 }

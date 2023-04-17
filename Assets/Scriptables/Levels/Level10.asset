@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98217f50e4c9ebc4ebd41ac65e484c0c, type: 3}
+  m_Name: Level10
+  m_EditorClassIdentifier: 
+  BoardSize: 5
+  HeightMap: 00000000000000000000000000000000000000000000000000000000010000000000000000000000000000000100000001000000010000000100000002000000020000000100000000000000000000000300000004000000050000000400000000000000
+  FinishPosition:
+    _x: 3
+    _y: 4
+  Units:
+  - <UnitData>k__BackingField: {fileID: 11400000, guid: 1c0accdba0ffb9649a890b69a58f23df,
+      type: 2}
+    <Position>k__BackingField:
+      _x: 4
+      _y: 2
+    <Rotation>k__BackingField:
+      _angle: 180
+    <MoveAcionsCount>k__BackingField: 5
+    <RotateAcionsCount>k__BackingField: 3
+    <JumpAcionsCount>k__BackingField: 3
+    <SpecialAcionsCount>k__BackingField: 1
+  - <UnitData>k__BackingField: {fileID: 11400000, guid: 2e5b2ffb4f006e84a88d354303430536,
+      type: 2}
+    <Position>k__BackingField:
+      _x: 2
+      _y: 1
+    <Rotation>k__BackingField:
+      _angle: 270
+    <MoveAcionsCount>k__BackingField: 0
+    <RotateAcionsCount>k__BackingField: 2
+    <JumpAcionsCount>k__BackingField: 0
+    <SpecialAcionsCount>k__BackingField: 1
+  - <UnitData>k__BackingField: {fileID: 11400000, guid: 2e5b2ffb4f006e84a88d354303430536,
+      type: 2}
+    <Position>k__BackingField:
+      _x: 2
+      _y: 2
+    <Rotation>k__BackingField:
+      _angle: 270
+    <MoveAcionsCount>k__BackingField: 0
+    <RotateAcionsCount>k__BackingField: 3
+    <JumpAcionsCount>k__BackingField: 0
+    <SpecialAcionsCount>k__BackingField: 2
+  Objects: []
+  BoardColors:
+    _background: {r: 0.8490566, g: 0.46005434, b: 0.3724635, a: 0}
+    _objects: {r: 0.36862743, g: 0.7921569, b: 0.55108744, a: 0}
+    _field: {r: 0.9716981, g: 0.55460125, b: 0.6214043, a: 0}
+  TutorialInstructions: {fileID: 0}

@@ -7,6 +7,11 @@ public class LevelSelector : MonoBehaviour
 
     private static LevelSelector _instance;
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
     private void Awake()
     {
         if (_instance != null)
