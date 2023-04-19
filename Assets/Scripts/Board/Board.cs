@@ -52,7 +52,7 @@ public class Board : MonoBehaviour
         _occupiedCells = new bool[_boardSize, _boardSize];
 
         _selectedLevel = FindObjectOfType<LevelSelector>().SelectedLevel;
-        CreateFromFileData(_levels[_selectedLevel - 1]);
+        CreateFromFileData(_levels[_selectedLevel]);
     }
 
     private void CreateFromFileData(BoardData data)

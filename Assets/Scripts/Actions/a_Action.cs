@@ -8,4 +8,6 @@ public abstract class a_Action
     {
         Target = target;
     }
+
+    public System.Action AfterAction { get; set; }
 }

@@ -29,7 +29,7 @@ act_moveForward;Идти вперед;Go forward;
 acth_moveForward;Передвинуть юнит вперед на 1 клетку, если обе клетки находятся на одной высоте;Move unit forward for 1 cell if both cells are at the same height;
 act_moveLeft;Идти влево;Go left;
 acth_moveLeft;Передвинуть юнит влево на 1 клетку, если обе клетки находятся на одной высоте;Move unit left for 1 cell if both cells are at the same height;
-act_moveRight;Идти вправр;Go right;
+act_moveRight;Идти вправо;Go right;
 acth_moveRight;Передвинуть юнит вправо на 1 клетку, если обе клетки находятся на одной высоте;Move unit left for 1 cell if both cells are at the same height;
 act_push;Толкнуть;Push;
 acth_push;Толкает объект перед юнитом на 1 клетку вперед в направлении взгляда юнита, если обе клетки находятся на одной высоте;Pushes the object in front of the unit 1 cell forward in the direction the unit is looking, if both cells are at the same height;

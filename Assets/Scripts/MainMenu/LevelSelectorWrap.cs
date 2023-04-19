@@ -22,7 +22,7 @@ public class LevelSelectorWrap : MonoBehaviour
     public void NextLevel()
     {
         LevelStatisticsCounter.TurnsCount = 0;
-        _levelSelector.GoToLevel(_levelSelector.SelectedLevel + 1);
+        _levelSelector.GoToLevel(_levelSelector.SelectedLevel);
     }
 
     public void Quit()

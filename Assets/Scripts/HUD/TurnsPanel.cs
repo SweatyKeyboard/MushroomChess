@@ -46,6 +46,9 @@ public class TurnsPanel : MonoBehaviour
 
     public void RemoveAction()
     {
+        if (TurnsList.Count == 0)
+            return;
+
         TurnsList[TurnsList.Count - 1].RemoveFromTurnList();
 
         _cells[TurnsList.Count - 1].Icon.sprite = _emptySprite;
@@ -154,10 +157,9 @@ public class TurnsPanel : MonoBehaviour
             int actionsAdded = 0;
             foreach (ObjectWithData obj in Board.Instance.ObjectsOnField)
             {
-                Debug.Log(obj.SpawnData.ActsAfterTurn + actionsAdded);
                 actionsList.Insert(
                     obj.SpawnData.ActsAfterTurn + actionsAdded++,
-                    ActionConverter.Convert(obj.Object, obj.SpawnData.ObjectData.Action));
+                    ActionConverter.Convert(obj.Object, obj.SpawnData.ObjectData.Action, obj.Object.Shot));
             }
 
             foreach (TurnPanelElement cell in _cells)

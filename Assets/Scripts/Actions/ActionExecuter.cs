@@ -7,6 +7,7 @@ public static class ActionExecuter
     {
         foreach (a_Action action in actions)
         {
+            action.AfterAction?.Invoke();
             yield return action.Courutine;
             yield return new WaitForSeconds(CourutineAnimations.AnimDuration / 2);
         }

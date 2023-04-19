@@ -180,6 +180,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a3aff8f1bf89a4c4ebbf6affefeb2350, type: 2}
   - {fileID: 11400000, guid: 25a4e6090ac1fa6498f88aaaffc6a0be, type: 2}
   - {fileID: 11400000, guid: e291a877a9d9d614c9f69d9b1d23e5b8, type: 2}
+  - {fileID: 11400000, guid: ba2320dc20ef9bd4da202795b2024ce1, type: 2}
+  - {fileID: 11400000, guid: e41dc0114d21b614f9c04691d9c3a41e, type: 2}
+  - {fileID: 11400000, guid: e8f78ccd8026d6b45a3d4aa662c18e0d, type: 2}
+  - {fileID: 11400000, guid: f7470694f4f55814a8b03a32b8ee03a3, type: 2}
   _cellPrefab: {fileID: 6582688553319095668, guid: 90ce445f4b8b08341ad331571ab94d79,
     type: 3}
   _finishPrefab: {fileID: 5317053273964887104, guid: 0f5ed382fb2261f4685ecf9f9570890e,
@@ -518,8 +522,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
+    m_Left: 5
+    m_Right: 5
     m_Top: 20
     m_Bottom: 0
   m_ChildAlignment: 1
@@ -1022,7 +1026,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 9ea022364e091bb47a5c6880648d30a7, type: 3}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -9043,8 +9047,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
+    m_Left: 5
+    m_Right: 5
     m_Top: 20
     m_Bottom: 0
   m_ChildAlignment: 1

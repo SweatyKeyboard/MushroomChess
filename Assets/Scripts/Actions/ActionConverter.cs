@@ -2,7 +2,7 @@
 using static ActionCategory;
 public static class ActionConverter
 {
-    public static a_Action Convert(a_BoardElement target, Action action)
+    public static a_Action Convert(a_BoardElement target, Action action, System.Action afterAction = null)
     {
         a_Action result = action.ActionType switch
         {
@@ -23,6 +23,12 @@ public static class ActionConverter
             Throw => new ElementThrowingAction(target, 2),
             _ => null
         };
+
+        if (afterAction != null)
+        {
+            result.AfterAction = afterAction;
+        }
+
         return result;
     }
 
