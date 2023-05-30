@@ -166,7 +166,7 @@ public class ActionPanelElement : MonoBehaviour
             return;
 
         
-        if (TurnsPanel.Instance.AddAction(this, _icon.sprite))
+        if (TurnsPanel.Instance.AddAction(this, _icon.sprite, _unitPanel.Color))
         {
             if (Board.Instance.Tutorial != null)
             {

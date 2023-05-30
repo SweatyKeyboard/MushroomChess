@@ -49,11 +49,11 @@ public class Banner : MonoBehaviour
     private void Update()
     {
         OnTimerTick();
-    }
 
-    private void OnMouseDown()
-    {
-        HideTutorial();
+        if (Input.GetMouseButtonDown(0) && _isShowing)
+        {
+            HideTutorial();
+        }
     }
 
     private void OnTimerTick()
@@ -137,8 +137,15 @@ public class Banner : MonoBehaviour
         }
         if (_isAnimating)
         {
-            Debug.Log("Dropped because of animating");
-            return;
+            if (_background.color.a == 0)
+            {
+                _isAnimating = false;
+            }
+            else
+            {
+                Debug.Log("Dropped because of animating");
+                return;
+            }
         }
 
         if (!_isAlreadyVisible)
@@ -174,6 +181,7 @@ public class Banner : MonoBehaviour
             _isTimerStarted = false;
             Debug.Log("Hide... - " + _isAnimating);
         }
+
     }
 
     public void FinishHideAnimation()

@@ -1,31 +1,13 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Button))]
-public class LevelSelectButton : MonoBehaviour
+public class LevelSelectButton : a_LevelSelectButton
 {
-    [HideInInspector][SerializeField] private TMP_Text _insideText;
-    [HideInInspector][SerializeField] private Image _completedLabel;
-    [HideInInspector][SerializeField] private Sprite _completedSprite;
-    [HideInInspector][SerializeField] private Sprite _emptySprite;
-
-    [SerializeField] private int _levelNumber;
-    private LevelSelector _levelSelector;
-    private Button _button;
-
-    public void Awake()
+    [HideInInspector][SerializeField] private Image _completedFasterLabel;
+    protected override void Start()
     {
-        _button = GetComponent<Button>();
-        _insideText.text = _levelNumber.ToString();
+        base.Start();
+        _completedFasterLabel.sprite = _levelSelector.IsLevelCompletedFasster(_levelNumber) ?
+                                       _completedSprite : _emptySprite;
     }
-
-    private void Start()
-    {
-        _levelSelector = FindObjectOfType<LevelSelector>();
-        _button.onClick.AddListener(delegate { _levelSelector.GoToLevel(_levelNumber); });
-        _completedLabel.sprite = _levelSelector.IsLevelCompleted(_levelNumber) ?
-            _completedSprite : _emptySprite;
-    }
-
 }

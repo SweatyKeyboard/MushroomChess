@@ -7,6 +7,7 @@ public abstract class a_BoardObject : a_BoardElement
 
     [SerializeField] private ParticleSystem _particles;
 
+    protected override bool IsShowingErrors => false;
 
     public void SetDigit(int digit)
     {

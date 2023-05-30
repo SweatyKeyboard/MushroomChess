@@ -7,6 +7,7 @@ using UnityEngine;
 public class BoardDataEditor : Editor
 {
     private SerializedProperty _boardSizeProperty;
+    private SerializedProperty _musicGroupProperty;
     private SerializedProperty _heightMapPropperty;
     private SerializedProperty _unitsPropperty;
     private SerializedProperty _objectsProperty;
@@ -20,6 +21,7 @@ public class BoardDataEditor : Editor
     private void OnEnable()
     {
         _boardSizeProperty = serializedObject.FindProperty("BoardSize");
+        _musicGroupProperty = serializedObject.FindProperty("MusicGroup");
         _heightMapPropperty = serializedObject.FindProperty("HeightMap");
         _unitsPropperty = serializedObject.FindProperty("Units");
         _objectsProperty = serializedObject.FindProperty("Objects");
@@ -33,6 +35,7 @@ public class BoardDataEditor : Editor
         serializedObject.Update();
 
         EditorGUILayout.PropertyField(_boardSizeProperty);
+        EditorGUILayout.PropertyField(_musicGroupProperty);
         EditorGUILayout.PropertyField(_tutorialInstructionsProperty);
 
         EditorGUILayout.PropertyField(_boardColorsProperty);

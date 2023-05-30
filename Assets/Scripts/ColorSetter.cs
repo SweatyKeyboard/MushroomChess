@@ -20,7 +20,7 @@ public class ColorSetter : MonoBehaviour
 
     public void SetBackgroundColor(Color color)
     {
-        _backgroundMaterial.color = color;
+        _backgroundMaterial.SetColor("_Tint", color);
     }
 
     public void SetObjectsColor(Color color)

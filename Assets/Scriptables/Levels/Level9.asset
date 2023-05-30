@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Level9
   m_EditorClassIdentifier: 
   BoardSize: 5
+  MusicGroup: 0
   HeightMap: 00000000000000000000000000000000000000000000000005000000050000000300000000000000000000000700000007000000030000000000000000000000070000000000000001000000000000000000000007000000000000000000000000000000
   FinishPosition:
     _x: 1
@@ -25,9 +26,9 @@ MonoBehaviour:
       _y: 3
     <Rotation>k__BackingField:
       _angle: 90
-    <MoveAcionsCount>k__BackingField: 2
+    <MoveAcionsCount>k__BackingField: 3
     <RotateAcionsCount>k__BackingField: 3
-    <JumpAcionsCount>k__BackingField: 7
+    <JumpAcionsCount>k__BackingField: 6
     <SpecialAcionsCount>k__BackingField: 1
   - <UnitData>k__BackingField: {fileID: 11400000, guid: 2e5b2ffb4f006e84a88d354303430536,
       type: 2}
@@ -42,7 +43,7 @@ MonoBehaviour:
     <SpecialAcionsCount>k__BackingField: 4
   Objects: []
   BoardColors:
-    _background: {r: 0.441825, g: 0.37255248, b: 0.49056602, a: 0}
-    _objects: {r: 0.8490566, g: 0.60980654, b: 0.43654326, a: 0}
-    _field: {r: 0.7187602, g: 0.5731132, b: 0.764151, a: 0}
+    _background: {r: 0.15797438, g: 0.4716981, b: 0.42986825, a: 0}
+    _objects: {r: 0.3519936, g: 0.6603774, b: 0.5469155, a: 0}
+    _field: {r: 0.58272517, g: 0.9150943, b: 0.69230115, a: 0}
   TutorialInstructions: {fileID: 0}

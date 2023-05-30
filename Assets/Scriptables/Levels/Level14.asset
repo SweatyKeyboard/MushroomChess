@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Level14
   m_EditorClassIdentifier: 
   BoardSize: 5
+  MusicGroup: 1
   HeightMap: 01000000000000000000000000000000000000000100000000000000000000000a0000000a000000020000000400000008000000090000000a00000003000000050000000800000009000000000000000600000007000000080000000900000000000000
   FinishPosition:
     _x: 3
@@ -64,7 +65,7 @@ MonoBehaviour:
     <SpecialAcionsCount>k__BackingField: 1
   Objects: []
   BoardColors:
-    _background: {r: 0.19920635, g: 0.09420612, b: 0.2735849, a: 0}
-    _objects: {r: 0.70322245, g: 0.5255874, b: 0.8773585, a: 0}
-    _field: {r: 0.4668751, g: 0.34269315, b: 0.4811321, a: 0}
+    _background: {r: 0.6698113, g: 0.55675095, b: 0.5023585, a: 0}
+    _objects: {r: 0.15143289, g: 0.49323618, b: 0.7830189, a: 0}
+    _field: {r: 0.8584906, g: 0.6063854, b: 0.4008989, a: 0}
   TutorialInstructions: {fileID: 0}

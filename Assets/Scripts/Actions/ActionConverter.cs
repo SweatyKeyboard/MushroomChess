@@ -21,6 +21,7 @@ public static class ActionConverter
             RollLeft => new ElementRotatingAction(target, -90),
             RollRight => new ElementRotatingAction(target, 90),
             Throw => new ElementThrowingAction(target, 2),
+            Rotate180 => new RotationAction(target, 180),
             _ => null
         };
 
@@ -51,6 +52,7 @@ public static class ActionConverter
             RollLeft => Specialing,
             RollRight => Specialing,
             Throw => Specialing,
+            Rotate180 => Rotating,
             _ => Moving
         };
         return result;

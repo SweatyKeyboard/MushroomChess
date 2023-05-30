@@ -6,6 +6,9 @@ public class ActionLimiterData
     [SerializeField] private int _unitIndex;
     [SerializeField] private Action _action;
 
+    public Sprite Icon => _action.Icon;
+    public int UnitIndex => _unitIndex;
+
     public ActionLimiterData(int index, Action action)
     {
         _unitIndex = index;

@@ -13,6 +13,6 @@ public class Action : ScriptableObject
     public Sprite Icon => _icon;
     public ActionType ActionType => _action;
     public KeyCode Hotkey => _hotkey;
-    public string Hint => Localizer.GetStringByKey(_hintKey);
+    public string Hint => _hintKey;
 
 }

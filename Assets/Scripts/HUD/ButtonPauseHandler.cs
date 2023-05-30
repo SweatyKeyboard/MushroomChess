@@ -12,11 +12,11 @@ public class ButtonPauseHandler : MonoBehaviour, IPauseHandler
     }
     public void OnContinue()
     {
-        _button.enabled = true;
+        _button.interactable = true;
     }
 
     public void OnPause()
     { 
-        _button.enabled = false;
+        _button.interactable = false;
     }
 }

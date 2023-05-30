@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MoveForward
   m_EditorClassIdentifier: 
   _nameKey: act_moveForward
-  _icon: {fileID: 21300000, guid: c71b3a08ec1a45a4f850465df63a3b12, type: 3}
+  _icon: {fileID: 21300000, guid: d63b014e5cea40a478c41051df8e34e8, type: 3}
   _action: 0
   _hotkey: 119
   _hintKey: acth_moveForward

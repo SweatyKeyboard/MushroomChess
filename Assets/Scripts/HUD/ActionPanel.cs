@@ -5,11 +5,18 @@ using UnityEngine;
 public class ActionPanel : MonoBehaviour
 {
     [SerializeField] private ActionPanelElement _actionPanelElementPrefab;
-    [SerializeField] private Transform _contentField;
+    [SerializeField] private RectTransform _contentField;
+    [SerializeField] private UnitPanel _unitPanel;
 
     private List<ActionPanelElement> _actions = new List<ActionPanelElement>();
 
     public List<ActionPanelElement> Actions => _actions;
+
+    private void SetContentAreaSize()
+    {
+        int actionsCount = _actions.Where(x => x.isActiveAndEnabled).Count();
+        _contentField.sizeDelta = new Vector2(175, 40 + (100 + 20) * actionsCount);
+    }
 
     public void CreateForUnit(UnitPanelElement unitPanel, UnitData data)
     {
@@ -29,6 +36,7 @@ public class ActionPanel : MonoBehaviour
                 OnActionClick();
             };
         }
+
     }
 
     private void OnActionClick()
@@ -44,6 +52,10 @@ public class ActionPanel : MonoBehaviour
 
     public void ShowForUnit(a_Unit unit)
     {
+
+        if (_unitPanel.SelectedUnit != unit)
+            return;
+
         foreach (ActionPanelElement actionPanelElement in _actions)
         {
             int actionsInCategory = actionPanelElement.Category switch
@@ -65,6 +77,7 @@ public class ActionPanel : MonoBehaviour
                 actionPanelElement.gameObject.SetActive(false);
             }
         }
+        SetContentAreaSize();
     }
 
     public void HideForAll()

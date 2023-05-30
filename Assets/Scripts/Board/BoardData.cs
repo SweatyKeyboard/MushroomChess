@@ -6,6 +6,7 @@ using UnityEngine;
 public class BoardData : ScriptableObject
 {
     [SerializeField] public int BoardSize = 5;
+    [SerializeField] public int MusicGroup;
     [SerializeField] public int[] HeightMap = new int[25];
 
     [SerializeField] public Position FinishPosition;
@@ -13,6 +14,7 @@ public class BoardData : ScriptableObject
     [SerializeField] public List<ObjectSpawnData> Objects = new List<ObjectSpawnData>();
     [SerializeField] public BoardColors BoardColors;
     [SerializeField] public TutorialLevel TutorialInstructions;
+
 
     private void OnEnable()
     {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Push
   m_EditorClassIdentifier: 
   _nameKey: act_push
-  _icon: {fileID: 21300000, guid: d089512e5d648384ab0600c2630df3fa, type: 3}
+  _icon: {fileID: 21300000, guid: 40c1a4aeb3a063444a4e64bee5c0ef2f, type: 3}
   _action: 6
   _hotkey: 32
   _hintKey: acth_push

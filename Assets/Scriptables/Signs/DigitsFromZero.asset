@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343edbb0a78b1d242a8afdb3bae88035, type: 3}
+  m_Name: DigitsFromZero
+  m_EditorClassIdentifier: 
+  _list:
+  - {fileID: 6686097678407549244, guid: de3f9aab6178f06499575413c3ec2de3, type: 3}
+  - {fileID: 6686097678407549244, guid: 8b5164eb1afb42f4ca18fe1df4d49221, type: 3}
+  - {fileID: 6686097678407549244, guid: c1db8b21aa8eda14b9a94b8d4341edfe, type: 3}
+  - {fileID: 6686097678407549244, guid: a0dbf145cd5ef6246b2b3a21cd43f90b, type: 3}
+  - {fileID: 6686097678407549244, guid: 01987f97ad1891548a045cf98694c498, type: 3}
+  - {fileID: 6686097678407549244, guid: 62a615f667fc6ce41bb1922cbe8b63ca, type: 3}
+  - {fileID: 6686097678407549244, guid: ecfe18546261e424eb99cc7123dc14bc, type: 3}
+  - {fileID: 6686097678407549244, guid: 4921613eea5070a40a67a3473eaedff7, type: 3}
+  - {fileID: 6686097678407549244, guid: 1d5ceebc761d6e045871b8b9dfc74638, type: 3}
+  - {fileID: 6686097678407549244, guid: 998a0b33d4b21274594a491470838af2, type: 3}
+  - {fileID: 6686097678407549244, guid: 67315a3d263ce514f94cf11f7b4a30db, type: 3}

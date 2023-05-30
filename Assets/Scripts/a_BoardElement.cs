@@ -1,16 +1,30 @@
 using System.Collections;
 using UnityEngine;
 
-public class a_BoardElement : MonoBehaviour
+public abstract class a_BoardElement : MonoBehaviour
 {
     protected bool _selected;
     public Position Position { get; set; }
     public Rotation Rotation { get; set; } = new Rotation(0);
 
     public BoardCell BoardCell => Board.Instance.Cells[Position.X, Position.Y];
-    public BoardCell CellInFrontOf => Board.Instance.Cells[Position.X + Rotation.X, Position.Y + Rotation.Y];
+    public BoardCell CellInFrontOf
+    {
+        get
+        {
+            try
+            {
+                return Board.Instance.Cells[Position.X + Rotation.X, Position.Y + Rotation.Y];
+            }
+            catch
+            {
+                return null;
+            }
+        }
+    }
 
     public System.Action Moved;
+    protected virtual bool IsShowingErrors { get; }
 
     protected void ChangeSelection()
     {
@@ -26,26 +40,30 @@ public class a_BoardElement : MonoBehaviour
 
         if (x2 < 0 || y2 < 0)
         {
-            Banner.Instance.ShowError("err_beyondBorders");
+            if (IsShowingErrors)
+                Banner.Instance.ShowError("err_beyondBorders");
             return false;
         }
 
         if (x2 >= Board.Instance.BoardSize || y2 >= Board.Instance.BoardSize)
         {
-            Banner.Instance.ShowError("err_beyondBorders");
+            if (IsShowingErrors)
+                Banner.Instance.ShowError("err_beyondBorders");
             return false;
         }
 
         if (Board.Instance.IsCellEmpty(new Position(x2, y2)))
         {
-            Banner.Instance.ShowError("err_occupiedCell");
+            if (IsShowingErrors)
+                Banner.Instance.ShowError("err_occupiedCell");
             return false;
         }
 
         if (Board.Instance.Cells[x2, y2].Height !=
             Board.Instance.Cells[x1, y1].Height)
         {
-            Banner.Instance.ShowError("err_notStraight");
+            if (IsShowingErrors)
+                Banner.Instance.ShowError("err_notStraight");
             return false;
         }
 
@@ -61,25 +79,29 @@ public class a_BoardElement : MonoBehaviour
 
         if (x2 < 0 || y2 < 0)
         {
-            Banner.Instance.ShowError("err_beyondBorders");
+            if (IsShowingErrors)
+                Banner.Instance.ShowError("err_beyondBorders");
             return false;
         }
 
         if (x2 >= Board.Instance.BoardSize || y2 >= Board.Instance.BoardSize)
         {
-            Banner.Instance.ShowError("err_beyondBorders");
+            if (IsShowingErrors)
+                Banner.Instance.ShowError("err_beyondBorders");
             return false;
         }
 
         if (Board.Instance.IsCellEmpty(new Position(x2, y2)))
         {
-            Banner.Instance.ShowError("err_occupiedCell");
+            if (IsShowingErrors)
+                Banner.Instance.ShowError("err_occupiedCell");
             return false;
         }
 
         if (Board.Instance.Cells[x2, y2].Height - Board.Instance.Cells[x1, y1].Height > height)
         {
-            Banner.Instance.ShowError("err_tooHigh");
+            if (IsShowingErrors)
+                Banner.Instance.ShowError("err_tooHigh");
             return false;
         }
 

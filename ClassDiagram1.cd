@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="a_BoardElement" Collapsed="true">
+    <Position X="3.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAhEAAAAQAAIIiEAAgAAAAEAAAAAEAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\a_BoardElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="a_Action" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAACAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\Scripts\Actions\a_Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="a_MovingAction" Collapsed="true">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\a_MovingAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Action" Collapsed="true">
+    <Position X="24.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAgAAAAAAAgAAQAAAAAEAKAAAAggAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\Action.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionConverter" Collapsed="true">
+    <Position X="26" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\ActionConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionExecuter" Collapsed="true">
+    <Position X="27.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\ActionExecuter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementMovingAction" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\ElementMovingAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementRotatingAction" Collapsed="true">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\ElementRotatingAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ElementThrowingAction" Collapsed="true">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <InheritanceLine Type="a_Action" ManuallyRouted="true">
+      <Path>
+        <Point X="12.25" Y="1.062" />
+        <Point X="12.25" Y="2.125" />
+        <Point X="11.648" Y="2.125" />
+        <Point X="11.648" Y="5.346" />
+        <Point X="12.5" Y="5.346" />
+        <Point X="12.5" Y="5.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\ElementThrowingAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinishLevelAction" Collapsed="true">
+    <Position X="1.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\FinishLevelAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GroundMoveAction" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Actions\GroundMoveAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JumpAction" Collapsed="true">
+    <Position X="6" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\JumpAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveForwardAction" Collapsed="true">
+    <Position X="6" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\MoveForwardAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveLeftAction" Collapsed="true">
+    <Position X="6" Y="5.25" Width="1.5" />
+    <InheritanceLine Type="a_MovingAction" ManuallyRouted="true">
+      <Path>
+        <Point X="10" Y="2.441" />
+        <Point X="10" Y="5.096" />
+        <Point X="6.75" Y="5.096" />
+        <Point X="6.75" Y="5.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\MoveLeftAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveRightAction" Collapsed="true">
+    <Position X="6" Y="6.25" Width="1.5" />
+    <InheritanceLine Type="a_MovingAction" ManuallyRouted="true">
+      <Path>
+        <Point X="10" Y="2.441" />
+        <Point X="10" Y="6.096" />
+        <Point X="6.75" Y="6.096" />
+        <Point X="6.75" Y="6.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\MoveRightAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RotationAction" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <InheritanceLine Type="a_Action" ManuallyRouted="true">
+      <Path>
+        <Point X="12.25" Y="1.062" />
+        <Point X="12.25" Y="2.376" />
+        <Point X="12.5" Y="2.376" />
+        <Point X="12.5" Y="2.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Actions\RotationAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Board" Collapsed="true">
+    <Position X="26" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAAAAgAACCGEBFAiIIAIEAAjEhhAlAAQAQAAHAAAOI=</HashCode>
+      <FileName>Assets\Scripts\Board\Board.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoardCell" Collapsed="true">
+    <Position X="27.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAABACEIAAAIAggAAAAAAAAAAAAEgQAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Board\BoardCell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoardColors" Collapsed="true">
+    <Position X="29.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAEAAAAAAEAAAAgAQAAgAA=</HashCode>
+      <FileName>Assets\Scripts\Board\BoardColors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoardData" Collapsed="true">
+    <Position X="31.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAEAAAAAAAAAAABAABAAEAECAAAAgACAA=</HashCode>
+      <FileName>Assets\Scripts\Board\BoardData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraRoll" Collapsed="true">
+    <Position X="34.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCEAAAAAAAAAAAEAAAgQAAAQAAAAAAQAAAIAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Board\CameraRoll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorSetter" Collapsed="true">
+    <Position X="24.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAQAAAAAAAAAEACAEAAAAABBAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ColorSetter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CourutineAnimations" Collapsed="true">
+    <Position X="26" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAoAAAgAAAAAAAAAAEAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CourutineAnimations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="a_Menu" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAEAAAEAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD\a_Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionPanel" Collapsed="true">
+    <Position X="31.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gCAAAAAAIAAAAAAAAABAAQAAAABABAAAAAAAAAASAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD\ActionPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionPanelElement" Collapsed="true">
+    <Position X="33" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4CQAIAAAAAwCBAEAAAAgAAQCAAABAICAAACh0AEACBQ=</HashCode>
+      <FileName>Assets\Scripts\HUD\ActionPanelElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Banner" Collapsed="true">
+    <Position X="34.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEAhgQQEAEDYgBAAAAABGAAAAaYQAAQCAAEA=</HashCode>
+      <FileName>Assets\Scripts\HUD\Banner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BannerOption" Collapsed="true">
+    <Position X="36.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAIAQAACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD\BannerOption.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BannerType" Collapsed="true">
+    <Position X="24.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAEQAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD\BannerType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonPauseHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAIAAAAAAAAAAABAAAEA=</HashCode>
+      <FileName>Assets\Scripts\HUD\ButtonPauseHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FinishMenu" Collapsed="true">
+    <Position X="1.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD\FinishMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hintable" Collapsed="true">
+    <Position X="27.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQAAAAAAAAgAAAAAABkAAAIEAAEAAAIgAAAAgAAAEA=</HashCode>
+      <FileName>Assets\Scripts\HUD\Hintable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LabelsList" Collapsed="true">
+    <Position X="29.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD\LabelsList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseMenu" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseObserver" Collapsed="true">
+    <Position X="34.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD\PauseObserver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScrollRectPauseHandler" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAABAAAEA=</HashCode>
+      <FileName>Assets\Scripts\HUD\ScrollRectPauseHandler.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="TurnPanelElement" Collapsed="true">
+    <Position X="24.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAABAAAAAAAAAAAACAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD\TurnPanelElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TurnsPanel" Collapsed="true">
+    <Position X="26" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ESQAAAAAACAAAAEhwAABQABAAAAAAAAAQAAAAAAgAEA=</HashCode>
+      <FileName>Assets\Scripts\HUD\TurnsPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitPanel" Collapsed="true">
+    <Position X="36.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAQAAAAABACAAABAAQBAAAAAEAAAAAACAAI=</HashCode>
+      <FileName>Assets\Scripts\HUD\UnitPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitPanelElement" Collapsed="true">
+    <Position X="24.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIIAGAEIAABIAQKBgAAQAIAwIAAADAAEEgkYBABKY=</HashCode>
+      <FileName>Assets\Scripts\HUD\UnitPanelElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LocalizationChanger" Collapsed="true">
+    <Position X="24.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Localization\LocalizationChanger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Localizer" Collapsed="true">
+    <Position X="26" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAgAAAAAAAAACAAIAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Localization\Localizer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleTextTranslator" Collapsed="true">
+    <Position X="31.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAACAAAAAAAAAAAAIAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Localization\SimpleTextTranslator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraRotate" Collapsed="true">
+    <Position X="36.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\CameraRotate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSelectButton" Collapsed="true">
+    <Position X="31.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAAACAAAAgAAAAAAAAAAIIAAAAAAAAAAAAgIEA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\LevelSelectButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSelector" Collapsed="true">
+    <Position X="33" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAUAAAAEAAAAAAAAAAAAAAAACAAFAAAAAAAAAAAAUA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\LevelSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelSelectorWrap" Collapsed="true">
+    <Position X="34.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAACAAAAAAAAABAAAAAAAAAAgAUA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\LevelSelectorWrap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="a_BoardObject" Collapsed="true">
+    <Position X="1" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAEAAAAAAAAACAAAAAAAAAAAIAQAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\a_BoardObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectData" Collapsed="true">
+    <Position X="27.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAgAAAAAAQAAAAAAAAAAAAAgACAAAQ=</HashCode>
+      <FileName>Assets\Scripts\Objects\ObjectData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectSpawnData" Collapsed="true">
+    <Position X="31.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAIAgAAAAAAAAAAAAAAAAAAAAAAAQAAg=</HashCode>
+      <FileName>Assets\Scripts\Objects\ObjectSpawnData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectWithData" Collapsed="true">
+    <Position X="33" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\ObjectWithData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StandartObject" Collapsed="true">
+    <Position X="1" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\StandartObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectSelector" Collapsed="true">
+    <Position X="29.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ObjectSelector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Position" Collapsed="true">
+    <Position X="36.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAQAAAAAQAAAAAAAAAAAAAAAAAAAAAAAYiA=</HashCode>
+      <FileName>Assets\Scripts\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rotation" Collapsed="true">
+    <Position X="27.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAABAAAAAAEAAAAAAYAA=</HashCode>
+      <FileName>Assets\Scripts\Rotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingnsList" Collapsed="true">
+    <Position X="33" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAQAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SingnsList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="a_State" Collapsed="true">
+    <Position X="2" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAEAACAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\States\a_State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateAnimating" Collapsed="true">
+    <Position X="0.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAEAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\States\StateAnimating.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateChanger" Collapsed="true">
+    <Position X="34.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAABAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\States\StateChanger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StateIdle" Collapsed="true">
+    <Position X="3" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAEAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\States\StateIdle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionLimiterData" Collapsed="true">
+    <Position X="29.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAgAAAAiA=</HashCode>
+      <FileName>Assets\Scripts\Tutorial\ActionLimiterData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelStatisticsCounter" Collapsed="true">
+    <Position X="36.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Tutorial\LevelStatisticsCounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PossibleTurnsLimiterData" Collapsed="true">
+    <Position X="24.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Tutorial\PossibleTurnsLimiterData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TurnLimiterData" Collapsed="true">
+    <Position X="36.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIACAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Tutorial\TurnLimiterData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TutorialLevel" Collapsed="true">
+    <Position X="27.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAACAQAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Tutorial\TutorialLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TutorialLevelManager" Collapsed="true">
+    <Position X="29.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\Tutorial\TutorialLevelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="a_Unit" Collapsed="true">
+    <Position X="4.25" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAYAAAAAAEAEAAAAAAAEAAAAIQAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Units\a_Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DefaultUnit" Collapsed="true">
+    <Position X="3.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Units\DefaultUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeadyUnit" Collapsed="true">
+    <Position X="5.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Units\LeadyUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitData" Collapsed="true">
+    <Position X="31.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAIEAAAAQAAAAAAACAAAAEAAEAAAI=</HashCode>
+      <FileName>Assets\Scripts\Units\UnitData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitHeadsColors" Collapsed="true">
+    <Position X="33" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Units\UnitHeadsColors.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitMovingType" Collapsed="true">
+    <Position X="34.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Units\UnitMovingType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnitSpawnData" Collapsed="true">
+    <Position X="26" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAAAAAAAIAgAAQCAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Units\UnitSpawnData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Readme" Collapsed="true">
+    <Position X="26" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\TutorialInfo\Scripts\Readme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IPauseHandler" Collapsed="true">
+    <Position X="24.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HUD\IPauseHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="States" Collapsed="true">
+    <Position X="31.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\Scripts\States\StateChanger.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Direction" Collapsed="true">
+    <Position X="29.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAQ=</HashCode>
+      <FileName>Assets\Scripts\Utils.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ActionCategory" Collapsed="true">
+    <Position X="24.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Utils.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ActionType" Collapsed="true">
+    <Position X="26" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAggAAAAIAAAEAAACEAEAAAAIQQACAAAEKAo=</HashCode>
+      <FileName>Assets\Scripts\Utils.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BannerClosingCondition" Collapsed="true">
+    <Position X="27.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAwA=</HashCode>
+      <FileName>Assets\Scripts\Utils.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
