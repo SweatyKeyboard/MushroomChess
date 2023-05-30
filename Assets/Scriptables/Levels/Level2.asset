@@ -42,6 +42,7 @@ MonoBehaviour:
     <SpecialAcionsCount>k__BackingField: 4
   Objects: []
   BoardColors:
-    _background: {r: 0.5029815, g: 0.7283508, b: 0.8396226, a: 0}
-    _objects: {r: 0.6521103, g: 0.5090335, b: 0.8773585, a: 0}
-    _field: {r: 0.2979708, g: 0.6792453, b: 0.5112984, a: 0}
+    _background: {r: 0.21794567, g: 0.49056602, b: 0.14578141, a: 0}
+    _objects: {r: 0.4768927, g: 0.8207547, b: 0.35230508, a: 0}
+    _field: {r: 0.5109864, g: 0.8490566, b: 0.49261305, a: 0}
+  TutorialInstructions: {fileID: 0}

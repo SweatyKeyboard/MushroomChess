@@ -1,3 +1,4 @@
-﻿public class PauseMenu : a_Menu
-{ 
+﻿using UnityEngine;
+public class PauseMenu : a_Menu
+{
 }

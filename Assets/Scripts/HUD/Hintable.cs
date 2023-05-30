@@ -17,7 +17,7 @@ public class Hintable : MonoBehaviour
         _banner = FindObjectOfType<Banner>(true);
     }
 
-    private void Update()
+   /* private void Update()
     {
         if (!_isTimerStarted)
             return;
@@ -27,6 +27,7 @@ public class Hintable : MonoBehaviour
         if (_timer < _timeToShow)
             return;
 
+        Debug.Log("Timer Finished");
         _isTimerStarted = false;
         Show();
     }
@@ -38,37 +39,37 @@ public class Hintable : MonoBehaviour
 
     private void StartTimer()
     {
+     
+        Debug.Log("Timer started");
         _timer = 0;
         _isTimerStarted = true;
         _isHintShowed = false;
-    }
+    }*/
 
-    private void Show()
+    public void Show()
     {
-        _banner.ShowHint(Hint);
+        Debug.Log("Hint showed");
+        _banner.ShowTutorial(Hint);
         _isHintShowed = true;
     }
 
-    private void OnMouseEnter()
+    /*private void OnMouseEnter()
     {
-        Debug.Log("Enter");
+        Debug.Log("Collider works");
         StartTimer();
     }
 
     private void OnMouseExit()
     {
-        Debug.Log("Exit");
         if (!_isHintShowed)
         {
-            Debug.Log("Stopped");
             StopTimer();
         }
         else
         {
-            Debug.Log("Hidden");
             _banner.HideHint();
         }
-    }
+    }*/
 
     private void OnDisable()
     {

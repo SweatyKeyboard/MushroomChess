@@ -3,9 +3,12 @@ using UnityEngine;
 public class LevelSelectorWrap : MonoBehaviour
 {
     private LevelSelector _levelSelector;
+
+    public int StarsCount => _levelSelector.StarsCount;
     private void Awake()
     {
         _levelSelector = FindObjectOfType<LevelSelector>();
+        Debug.Log(_levelSelector.StarsCount);
     }
     public void GoToLevel(int levelNumber)
     {

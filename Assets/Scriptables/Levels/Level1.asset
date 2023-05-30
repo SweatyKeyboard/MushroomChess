@@ -24,7 +24,7 @@ MonoBehaviour:
       _x: 0
       _y: 0
     <Rotation>k__BackingField:
-      _angle: 270
+      _angle: 0
     <MoveAcionsCount>k__BackingField: 11
     <RotateAcionsCount>k__BackingField: 6
     <JumpAcionsCount>k__BackingField: 0
@@ -42,6 +42,7 @@ MonoBehaviour:
     <SpecialAcionsCount>k__BackingField: 4
   Objects: []
   BoardColors:
-    _background: {r: 0.0746262, g: 0.3679245, b: 0.14698836, a: 0}
-    _objects: {r: 0.76398903, g: 1, b: 0.6556604, a: 0}
-    _field: {r: 0.42186502, g: 0.6886792, b: 0.26312745, a: 0}
+    _background: {r: 0.0745098, g: 0.2769659, b: 0.36862746, a: 0}
+    _objects: {r: 0.17647058, g: 0.39799744, b: 0.6117647, a: 0}
+    _field: {r: 0.5411765, g: 0.7083009, b: 0.8117647, a: 0}
+  TutorialInstructions: {fileID: 0}

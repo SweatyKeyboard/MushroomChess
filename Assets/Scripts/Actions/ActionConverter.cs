@@ -2,7 +2,7 @@
 using static ActionCategory;
 public static class ActionConverter
 {
-    public static a_Action Convert(a_BoardElement target, Action action)
+    public static a_Action Convert(a_BoardElement target, Action action, System.Action afterAction = null)
     {
         a_Action result = action.ActionType switch
         {
@@ -21,8 +21,15 @@ public static class ActionConverter
             RollLeft => new ElementRotatingAction(target, -90),
             RollRight => new ElementRotatingAction(target, 90),
             Throw => new ElementThrowingAction(target, 2),
+            Rotate180 => new RotationAction(target, 180),
             _ => null
         };
+
+        if (afterAction != null)
+        {
+            result.AfterAction = afterAction;
+        }
+
         return result;
     }
 
@@ -45,6 +52,7 @@ public static class ActionConverter
             RollLeft => Specialing,
             RollRight => Specialing,
             Throw => Specialing,
+            Rotate180 => Rotating,
             _ => Moving
         };
         return result;

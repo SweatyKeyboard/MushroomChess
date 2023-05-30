@@ -9,6 +9,7 @@ public class TurnsPanel : MonoBehaviour
     [SerializeField] private UnitPanel _unitPanel;
     [SerializeField] private TurnPanelElement[] _cells;
     [SerializeField] private Sprite _emptySprite;
+    [SerializeField] private TutorialHintPanel _tutorHintPanel;
 
     public static TurnsPanel Instance;
     public List<ActionPanelElement> TurnsList { get; set; } = new List<ActionPanelElement>();
@@ -46,10 +47,12 @@ public class TurnsPanel : MonoBehaviour
 
     public void RemoveAction()
     {
+        if (TurnsList.Count == 0)
+            return;
+
         TurnsList[TurnsList.Count - 1].RemoveFromTurnList();
 
         _cells[TurnsList.Count - 1].Icon.sprite = _emptySprite;
-        _cells[TurnsList.Count - 1].Label.sprite = _emptySprite;
 
         TurnsList.RemoveAt(TurnsList.Count - 1);
         if (Board.Instance.Tutorial != null)
@@ -79,13 +82,13 @@ public class TurnsPanel : MonoBehaviour
         }
     }
 
-    public bool AddAction(ActionPanelElement action, Sprite icon)
+    public bool AddAction(ActionPanelElement action, Sprite icon, Color color)
     {
         if (TurnsList.Count < 5)
         {
             TurnsList.Add(action);
             _cells[TurnsList.Count - 1].Icon.sprite = icon;
-            _cells[TurnsList.Count - 1].Label.sprite = action.UnitPanel.Label;
+            _cells[TurnsList.Count - 1].Icon.color = color;
             return true;
         }
 
@@ -117,6 +120,7 @@ public class TurnsPanel : MonoBehaviour
     private void TurnEnd()
     {
         LevelStatisticsCounter.TurnsCount++;
+        _tutorHintPanel.SetImages(LevelStatisticsCounter.TurnsCount);
         Board.Instance.Tutorial?.InvokeEventsForTurn(LevelStatisticsCounter.TurnsCount);
     }
 
@@ -154,10 +158,9 @@ public class TurnsPanel : MonoBehaviour
             int actionsAdded = 0;
             foreach (ObjectWithData obj in Board.Instance.ObjectsOnField)
             {
-                Debug.Log(obj.SpawnData.ActsAfterTurn + actionsAdded);
                 actionsList.Insert(
                     obj.SpawnData.ActsAfterTurn + actionsAdded++,
-                    ActionConverter.Convert(obj.Object, obj.SpawnData.ObjectData.Action));
+                    ActionConverter.Convert(obj.Object, obj.SpawnData.ObjectData.Action, obj.Object.Shot));
             }
 
             foreach (TurnPanelElement cell in _cells)

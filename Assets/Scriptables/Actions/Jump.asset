@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Jump
   m_EditorClassIdentifier: 
   _nameKey: act_jump
-  _icon: {fileID: 21300000, guid: a3a76ecf7ad94744f847b16684ddba80, type: 3}
+  _icon: {fileID: 21300000, guid: d6781fc3dd840ee4d8c0cb22c433a671, type: 3}
   _action: 1
   _hotkey: 32
   _hintKey: acth_jump

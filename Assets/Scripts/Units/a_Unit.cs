@@ -1,14 +1,43 @@
 using System.Collections;
 using UnityEngine;
 
+
+[RequireComponent(typeof(Animator))]
 public abstract class a_Unit : a_BoardElement
 {
     [SerializeField] protected UnitMovingType _moving;
+    [SerializeField] protected MeshRenderer _head;
+    [SerializeField] protected MeshRenderer[] _body;
+    [SerializeField] protected Color _bodyColor;
+
+    private Animator _animator;
+
+    protected override bool IsShowingErrors => true;
+    public Color HeadColor { get; private set; }
+    public Color BodyColor => _bodyColor;
 
 
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
     public override bool IsAbleToMove(Position position)
     {
         return base.IsAbleToMove(position);
+    }
+
+    public void SetHeadColor(Color color)
+    {
+        HeadColor = color;
+        _head.material.SetColor("_BaseColor", color);
+    }
+
+    public void SetBodyColor()
+    {
+        foreach (MeshRenderer bodyPart in _body)
+        {
+            bodyPart.material.SetColor("_BaseColor", _bodyColor);
+        }
     }
 
     private IEnumerator Move(int distance, int angleBias)
@@ -66,5 +95,10 @@ public abstract class a_Unit : a_BoardElement
             yield return CourutineAnimations.Jump(gameObject, Board.Instance[newPos.X, newPos.Y], height);
         }
         Moved?.Invoke();
+    }
+
+    public void Animate(string triggerName)
+    {
+        _animator.SetTrigger(triggerName);
     }
 }

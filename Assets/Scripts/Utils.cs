@@ -30,7 +30,8 @@ public enum ActionType
     Finish,
     Throw,
     RollLeft,
-    RollRight
+    RollRight,
+    Rotate180
 }
 
 public enum BannerClosingCondition

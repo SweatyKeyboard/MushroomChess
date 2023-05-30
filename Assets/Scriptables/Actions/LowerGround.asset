@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LowerGround
   m_EditorClassIdentifier: 
   _nameKey: act_lowerGround
-  _icon: {fileID: 21300000, guid: f945e7dc698a3ac45a600deb4cedf1a4, type: 3}
+  _icon: {fileID: 21300000, guid: 116f98d93a8d8c049a0c016353e807c1, type: 3}
   _action: 5
   _hotkey: 115
   _hintKey: acth_lowerGround

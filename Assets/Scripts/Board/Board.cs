@@ -10,6 +10,8 @@ public class Board : MonoBehaviour
 
     [SerializeField] private SingnsList _digits;
     [SerializeField] private SingnsList _letters;
+    [SerializeField] private UnitHeadsColors _headColors;
+    [SerializeField] private TutorialHintPanel _tutorHintPanel;
 
     [SerializeField] private int _boardSize = 5;
 
@@ -20,6 +22,8 @@ public class Board : MonoBehaviour
 
     private float _scale = 1f;
     public float StairScale = 0.1f;
+
+    private bool _isHeightMapShowed;
 
     private ColorSetter _colorSetter;
     [SerializeField] private UnitPanel _unitPanel;
@@ -52,7 +56,7 @@ public class Board : MonoBehaviour
         _occupiedCells = new bool[_boardSize, _boardSize];
 
         _selectedLevel = FindObjectOfType<LevelSelector>().SelectedLevel;
-        CreateFromFileData(_levels[_selectedLevel - 1]);
+        CreateFromFileData(_levels[_selectedLevel]);
     }
 
     private void CreateFromFileData(BoardData data)
@@ -75,10 +79,12 @@ public class Board : MonoBehaviour
             }
         }
 
+        int unitIndex = 0;
         foreach (UnitSpawnData unitSpawnData in data.Units)
         {
-            SpawnUnit(unitSpawnData);
+            SpawnUnit(unitSpawnData, unitIndex++);
         }
+        _unitPanel.SetContentAreaSize(data.Units.Count);
 
         foreach (ObjectSpawnData objectSpawnData in data.Objects)
         {
@@ -88,7 +94,12 @@ public class Board : MonoBehaviour
         transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         CreateFinish(data.FinishPosition);
 
+        FindObjectOfType<MusicController>().PlayMusic(data.MusicGroup);
+
         Tutorial = data.TutorialInstructions ?? null;
+        _tutorHintPanel.SetActive(data.TutorialInstructions != null);
+        _tutorHintPanel.SetData(data.TutorialInstructions, _headColors);
+        _tutorHintPanel.SetImages(0);
     }
 
     private void Start()
@@ -115,7 +126,7 @@ public class Board : MonoBehaviour
                _finishPrefab,
                this[position.X, position.Y] + new Vector3(0, 0.01f, 0),
                Quaternion.identity,
-               transform);
+               _cellPositions[position.X, position.Y].transform);
         FinishPosition = position;
     }
 
@@ -133,7 +144,7 @@ public class Board : MonoBehaviour
         Color tileColor = _colorSetter.TileColor;
         if (i % 2 == j % 2)
         {
-            Cells[i, j].GetComponent<MeshRenderer>().material.color =
+            Cells[i, j].Cell.material.color =
                 tileColor * 0.5f;
         }
     }
@@ -148,7 +159,7 @@ public class Board : MonoBehaviour
             j == 0);
     }
 
-    public void SpawnUnit(UnitSpawnData unitSpawnData)
+    public void SpawnUnit(UnitSpawnData unitSpawnData, int index)
     {
         int x = unitSpawnData.Position.X;
         int y = unitSpawnData.Position.Y;
@@ -161,6 +172,8 @@ public class Board : MonoBehaviour
         newUnit.Position = new Position(x, y);
         newUnit.Rotation = new Rotation(unitSpawnData.Rotation.Angle);
         newUnit.transform.rotation = Quaternion.Euler(0, newUnit.Rotation.Angle, 0);
+        newUnit.SetHeadColor(_headColors[index]);
+        newUnit.SetBodyColor();
 
         Cells[x, y].Element = newUnit;
         UpdateOcuppiedCells(new Position(x, y));
@@ -197,5 +210,34 @@ public class Board : MonoBehaviour
     public void UpdateOcuppiedCells(Position position)
     {
         _occupiedCells[position.X, position.Y] = !_occupiedCells[position.X, position.Y];
+    }
+
+    private void EnableHeightMap()
+    {
+        foreach (BoardCell cell in _cellPositions)
+        {
+            cell.ShowHeightMap();
+        }
+    }
+
+    private void DisableHeightMap()
+    {
+        foreach (BoardCell cell in _cellPositions)
+        {
+            cell.HideHeightMap();
+        }
+    }
+
+    public void SwitchHeightMap()
+    {
+        if (_isHeightMapShowed)
+        {
+            DisableHeightMap();
+        }
+        else
+        {
+            EnableHeightMap();
+        }
+        _isHeightMapShowed = !_isHeightMapShowed;
     }
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8472c33674aa87a429ec26a7bd87fee6, type: 3}
   m_Name: LeftRotator
   m_EditorClassIdentifier: 
-  _object: {fileID: -4908159091402347423, guid: d9f884d16fd7aa14f95695dcf451534a,
+  _object: {fileID: -4908159091402347423, guid: 6339a6a8b9fefef418010271bc4d2734,
     type: 3}
   _name: Left Rotator
   _action: {fileID: 11400000, guid: 10d0499fa4704124b888a556da73e467, type: 2}

@@ -1,10 +1,10 @@
 using UnityEngine;
-
+using System.Linq;
 public class PauseObserver : MonoBehaviour
 {
     public void Pause()
     {
-        foreach (IPauseHandler pauseObject in FindObjectsOfType<ButtonPauseHandler>())
+        foreach (IPauseHandler pauseObject in FindObjectsOfType<MonoBehaviour>().OfType<IPauseHandler>().ToArray())
         {
             pauseObject.OnPause();
         }
@@ -12,7 +12,7 @@ public class PauseObserver : MonoBehaviour
 
     public void Continue()
     {
-        foreach (IPauseHandler pauseObject in FindObjectsOfType<ButtonPauseHandler>())
+        foreach (IPauseHandler pauseObject in FindObjectsOfType<MonoBehaviour>().OfType<IPauseHandler>().ToArray())
         {
             pauseObject.OnContinue();
         }

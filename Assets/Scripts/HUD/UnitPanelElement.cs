@@ -4,12 +4,13 @@ using UnityEngine.UI;
 
 public class UnitPanelElement : MonoBehaviour
 {
-    [SerializeField] private Image _icon;
+    [SerializeField] private Image _bodyIcon;
+    [SerializeField] private Image _headIcon;
+    [SerializeField] private Image _leftEye;
+    [SerializeField] private Image _rightEye;
+
     [SerializeField] private TMP_Text _nameText;
     [SerializeField] private Image _background;
-    [SerializeField] private Image _label;
-
-    [SerializeField] private LabelsList _labels;
 
     [SerializeField] private TMP_Text _movesCounter;
     [SerializeField] private TMP_Text _jumpsCounter;
@@ -18,6 +19,7 @@ public class UnitPanelElement : MonoBehaviour
     [SerializeField] private TMP_Text _hotKey;
 
     public int Index { get; private set; }
+    public Color Color { get; private set; }
     private string _name;
     private a_Unit _unit;
 
@@ -34,8 +36,6 @@ public class UnitPanelElement : MonoBehaviour
 
     public a_Unit Unit => _unit;
 
-    public Sprite Label => _labels[Index];
-
     public event System.Action<int> Clicking;
 
     private void Update()
@@ -46,14 +46,19 @@ public class UnitPanelElement : MonoBehaviour
         }
     }
 
-    public void Set(a_Unit unit, int index, Sprite icon, string name)
+    public void Set(a_Unit unit, int index, IconsSet icons, string name, Color color, Color bodyColor)
     {
         Index = index;
         _hotKey.text = $"[{index+1}]";
-        _icon.sprite = icon;
+
+        _headIcon.color = color;
+        _bodyIcon.color = bodyColor;
+        _leftEye.sprite = icons.Eye;
+        _rightEye.sprite = icons.Eye;
+
         _unit = unit;
-        _label.sprite = _labels[index];
         _name = name;
+        Color = color;
 
         UpdateName();
 
