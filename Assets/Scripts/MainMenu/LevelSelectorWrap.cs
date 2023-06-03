@@ -9,6 +9,7 @@ public class LevelSelectorWrap : MonoBehaviour
     {
         _levelSelector = FindObjectOfType<LevelSelector>();
         Debug.Log(_levelSelector.StarsCount);
+        LevelStatisticsCounter.TurnsCount = 0;
     }
     public void GoToLevel(int levelNumber)
     {
