@@ -10,6 +10,7 @@ public class BoardData : ScriptableObject
     [SerializeField] public int[] HeightMap = new int[25];
 
     [SerializeField] public Position FinishPosition;
+    [SerializeField] public Position CoinPosition;
     [SerializeField] public List<UnitSpawnData> Units = new List<UnitSpawnData>();
     [SerializeField] public List<ObjectSpawnData> Objects = new List<ObjectSpawnData>();
     [SerializeField] public BoardColors BoardColors;

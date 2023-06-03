@@ -12,6 +12,7 @@ public class BoardDataEditor : Editor
     private SerializedProperty _unitsPropperty;
     private SerializedProperty _objectsProperty;
     private SerializedProperty _finishPosPropperty;
+    private SerializedProperty _coinPosPropperty;
     private SerializedProperty _boardColorsProperty;
     private SerializedProperty _tutorialInstructionsProperty;
 
@@ -26,6 +27,7 @@ public class BoardDataEditor : Editor
         _unitsPropperty = serializedObject.FindProperty("Units");
         _objectsProperty = serializedObject.FindProperty("Objects");
         _finishPosPropperty = serializedObject.FindProperty("FinishPosition");
+        _coinPosPropperty = serializedObject.FindProperty("CoinPosition");
         _boardColorsProperty = serializedObject.FindProperty("BoardColors");
         _tutorialInstructionsProperty = serializedObject.FindProperty("TutorialInstructions");
     }
@@ -56,6 +58,7 @@ public class BoardDataEditor : Editor
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
         EditorGUILayout.PropertyField(_finishPosPropperty);
+        EditorGUILayout.PropertyField(_coinPosPropperty);
 
 
 

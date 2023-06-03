@@ -7,6 +7,7 @@ public class Board : MonoBehaviour
 
     [SerializeField] private BoardCell _cellPrefab;
     [SerializeField] private Transform _finishPrefab;
+    [SerializeField] private Transform _coinPrefab;
 
     [SerializeField] private SingnsList _digits;
     [SerializeField] private SingnsList _letters;
@@ -32,6 +33,7 @@ public class Board : MonoBehaviour
     public int BoardSize => _boardSize;
     public TutorialLevel Tutorial { get; private set; }
     public Position FinishPosition { get; private set; }
+    public Position CoinPosition { get; private set; }
     public static Board Instance;
     public Vector3 this[int i, int j] => new Vector3(
         _cellPositions[i, j].transform.position.x,
@@ -93,6 +95,7 @@ public class Board : MonoBehaviour
 
         transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
         CreateFinish(data.FinishPosition);
+        CreateCoin(data.CoinPosition);
 
         FindObjectOfType<MusicController>().PlayMusic(data.MusicGroup);
 
@@ -128,6 +131,16 @@ public class Board : MonoBehaviour
                Quaternion.identity,
                _cellPositions[position.X, position.Y].transform);
         FinishPosition = position;
+    }
+
+    private void CreateCoin(Position position)
+    {
+        Instantiate(
+               _coinPrefab,
+               this[position.X, position.Y] + Vector3.up * 0.25f,
+               Quaternion.identity,
+               _cellPositions[position.X, position.Y].transform);
+        CoinPosition = position;
     }
 
     private void SetCellHeight(int i, int j, int height = 1)

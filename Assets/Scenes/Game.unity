@@ -197,6 +197,8 @@ MonoBehaviour:
     type: 3}
   _finishPrefab: {fileID: 5317053273964887104, guid: 0f5ed382fb2261f4685ecf9f9570890e,
     type: 3}
+  _coinPrefab: {fileID: 829667713057168324, guid: 7fe64109399d6fc4888221f54121922c,
+    type: 3}
   _digits: {fileID: 11400000, guid: 5c9873236da2e2348ac45699823b2a2d, type: 2}
   _letters: {fileID: 11400000, guid: a3fd04cadde968743a1d7ee46bd7b908, type: 2}
   _headColors: {fileID: 11400000, guid: 20b1148f2255b5a43a5e4b28cac02fc7, type: 2}
@@ -589,9 +591,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad510328604bd54da3d17e4a785bb6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _objectMaterial: {fileID: 2100000, guid: db21b96319d114246b0dbd947adc9f9b, type: 2}
-  _backgroundMaterial: {fileID: 2100000, guid: 195e1ccae9d0c3241abc80135b861b12, type: 2}
-  _fieldMaterial: {fileID: 2100000, guid: 82ed03e9dba6f5c4f85f60e6b2a48920, type: 2}
+  _objectMaterials:
+  - {fileID: 2100000, guid: db21b96319d114246b0dbd947adc9f9b, type: 2}
+  - {fileID: 2100000, guid: 6bebf49d99751524ab33c861f82c4108, type: 2}
+  _backgroundMaterials:
+  - {fileID: 2100000, guid: 195e1ccae9d0c3241abc80135b861b12, type: 2}
+  _fieldMaterials:
+  - {fileID: 2100000, guid: 82ed03e9dba6f5c4f85f60e6b2a48920, type: 2}
 --- !u!1 &89150213
 GameObject:
   m_ObjectHideFlags: 0
