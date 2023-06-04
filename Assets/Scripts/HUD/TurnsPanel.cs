@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +9,7 @@ public class TurnsPanel : MonoBehaviour
     [SerializeField] private TurnPanelElement[] _cells;
     [SerializeField] private Sprite _emptySprite;
     [SerializeField] private TutorialHintPanel _tutorHintPanel;
+    [SerializeField] private Button[] _lockedButtonsOnStart;
 
     public static TurnsPanel Instance;
     public List<ActionPanelElement> TurnsList { get; set; } = new List<ActionPanelElement>();
@@ -122,10 +122,19 @@ public class TurnsPanel : MonoBehaviour
         LevelStatisticsCounter.TurnsCount++;
         _tutorHintPanel.SetImages(LevelStatisticsCounter.TurnsCount);
         Board.Instance.Tutorial?.InvokeEventsForTurn(LevelStatisticsCounter.TurnsCount);
+
+        foreach (Button button in _lockedButtonsOnStart)
+        {
+            button.interactable = true;
+        }
     }
 
     private void StartActionsPrivate()
     {
+        foreach (Button button in _lockedButtonsOnStart)
+        {
+            button.interactable = false;
+        }
 
         bool isAllright = true;
 
