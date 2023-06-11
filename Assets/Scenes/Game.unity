@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levels:
   - {fileID: 11400000, guid: 164c541e494ab534e952347549262090, type: 2}
-  - {fileID: 11400000, guid: 8ee58f304560540438e899aa7d98017c, type: 2}
+  - {fileID: 11400000, guid: 0f3ade5a8d436414180c34a2581f5014, type: 2}
   - {fileID: 11400000, guid: 25a4e6090ac1fa6498f88aaaffc6a0be, type: 2}
   - {fileID: 11400000, guid: 4cecd6b5b00e6564b90857278a4a493a, type: 2}
   - {fileID: 11400000, guid: a3aff8f1bf89a4c4ebbf6affefeb2350, type: 2}
@@ -197,11 +197,11 @@ MonoBehaviour:
     type: 3}
   _finishPrefab: {fileID: 5317053273964887104, guid: 0f5ed382fb2261f4685ecf9f9570890e,
     type: 3}
-  _coinPrefab: {fileID: 829667713057168324, guid: 7fe64109399d6fc4888221f54121922c,
+  _coinPrefab: {fileID: -7327139909406840584, guid: 7fe64109399d6fc4888221f54121922c,
     type: 3}
   _digits: {fileID: 11400000, guid: 5c9873236da2e2348ac45699823b2a2d, type: 2}
   _letters: {fileID: 11400000, guid: a3fd04cadde968743a1d7ee46bd7b908, type: 2}
-  _headColors: {fileID: 11400000, guid: 20b1148f2255b5a43a5e4b28cac02fc7, type: 2}
+  _headColors: {fileID: 11400000, guid: cba1cfa3af084c343bad13c77431ab1d, type: 2}
   _tutorHintPanel: {fileID: 1054394864}
   _boardSize: 5
   StairScale: 0.1
@@ -632,10 +632,12 @@ MonoBehaviour:
   _objectMaterials:
   - {fileID: 2100000, guid: db21b96319d114246b0dbd947adc9f9b, type: 2}
   - {fileID: 2100000, guid: 6bebf49d99751524ab33c861f82c4108, type: 2}
+  - {fileID: 2100000, guid: cdb21f9acd3be25469c334e5519fc1b8, type: 2}
   _backgroundMaterials:
   - {fileID: 2100000, guid: 195e1ccae9d0c3241abc80135b861b12, type: 2}
   _fieldMaterials:
   - {fileID: 2100000, guid: 82ed03e9dba6f5c4f85f60e6b2a48920, type: 2}
+  - {fileID: 2100000, guid: 21879d88862e3ba468ea589b6837db57, type: 2}
 --- !u!1 &89150213
 GameObject:
   m_ObjectHideFlags: 0
@@ -9688,7 +9690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -88, y: 290.3676}
+  m_AnchoredPosition: {x: -88, y: 290.3673}
   m_SizeDelta: {x: 175, y: 579.58997}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1161812117
@@ -9837,16 +9839,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _musics:
-  - {fileID: 8300000, guid: 6a1139f18c417ff439894514fbba2d22, type: 3}
-  - {fileID: 8300000, guid: ce9f0419ab6ab7945b86239edbf50a02, type: 3}
-  - {fileID: 8300000, guid: 96c77f259172cdc4eb3919ad89c5de93, type: 3}
-  - {fileID: 8300000, guid: b7db2f2d6aad3544fab3294199f2f63c, type: 3}
-  - {fileID: 8300000, guid: de9eebb0ed6e6c3499162268c9e51637, type: 3}
-  - {fileID: 8300000, guid: f3ed1e6b1351cbd40a154caab18d0356, type: 3}
-  - {fileID: 8300000, guid: e2d42c86453693a478a42f243fa5bc33, type: 3}
-  - {fileID: 8300000, guid: f8966f15b39f8e4439079fd869340b73, type: 3}
-  - {fileID: 8300000, guid: efc6dbca9d7a43e4fb91c49e53c2a0a5, type: 3}
-  _songsInGroup: 3
+  - {fileID: 11400000, guid: 38c773cc95b2274429b976ca89d6fac7, type: 2}
+  - {fileID: 11400000, guid: 07bcb65f1d229c648aedab18e37aa031, type: 2}
+  - {fileID: 11400000, guid: 5bf7ca9c77c5e81498dc91817b7d60ce, type: 2}
+  - {fileID: 11400000, guid: 3d286cb18ccea8c4daf4e2030d50fa2f, type: 2}
+  - {fileID: 11400000, guid: da62eab1be76838468f417b5008e8bcf, type: 2}
+  - {fileID: 11400000, guid: 053c58b3dca1af442a090ddf2242414a, type: 2}
+  - {fileID: 11400000, guid: 3fd9c671afaac244f843d109a32b64fb, type: 2}
+  - {fileID: 11400000, guid: cbb0d3d5b78e1ff4e9b352e282a90183, type: 2}
+  - {fileID: 11400000, guid: 54c9c83ad49b94049a16fc850971457e, type: 2}
+  - {fileID: 11400000, guid: 51d4e3eafe3b47548a4a83adc849ca0b, type: 2}
+  - {fileID: 11400000, guid: ff9d8146d8f79f648a42dc306afe216a, type: 2}
+  - {fileID: 11400000, guid: 33c1b49f7efefb5478eb751587de4247, type: 2}
+  - {fileID: 11400000, guid: 724024b25d5bc1247844c41be530f44b, type: 2}
+  - {fileID: 11400000, guid: f57d7864b86c6ed43968e03055a24685, type: 2}
+  - {fileID: 11400000, guid: 35ddc72c995060346b14d200fad9b34e, type: 2}
 --- !u!82 &1187606388
 AudioSource:
   m_ObjectHideFlags: 0

@@ -68,6 +68,10 @@ public class UnitPanelElement : MonoBehaviour
     private void OnMoved()
     {
         UpdateName();
+         if (Board.Instance.CoinPosition != null && Unit.Position == Board.Instance.CoinPosition)
+        {
+            FindObjectOfType<Coin>().OnCollected();
+        }
     }
 
     private void UpdateName()

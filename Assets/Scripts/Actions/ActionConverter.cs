@@ -1,4 +1,5 @@
-﻿using static ActionType;
+﻿using UnityEngine;
+using static ActionType;
 using static ActionCategory;
 public static class ActionConverter
 {
@@ -22,6 +23,8 @@ public static class ActionConverter
             RollRight => new ElementRotatingAction(target, 90),
             Throw => new ElementThrowingAction(target, 2),
             Rotate180 => new RotationAction(target, 180),
+            MimicPrevious => new MimicAction(target, MimicType.Previous),
+            MimicNext => new MimicAction(target, MimicType.Next),
             _ => null
         };
 
@@ -53,6 +56,8 @@ public static class ActionConverter
             RollRight => Specialing,
             Throw => Specialing,
             Rotate180 => Rotating,
+            MimicPrevious => Specialing,
+            MimicNext => Specialing,
             _ => Moving
         };
         return result;

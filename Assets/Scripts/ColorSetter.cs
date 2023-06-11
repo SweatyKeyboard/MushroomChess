@@ -17,7 +17,7 @@ public class ColorSetter : MonoBehaviour
     public void SetObjectsColor(Color color)
     {
         foreach (Material material in _objectMaterials)
-            material.color = color;
+            material.SetColor("_BaseColor", color);
     }
 
     public void SetFieldColor(Color color)

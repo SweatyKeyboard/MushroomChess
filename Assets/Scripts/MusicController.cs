@@ -1,21 +1,21 @@
+using System.Linq;
 using UnityEngine;
 
 
 [RequireComponent(typeof(AudioSource))]
 public class MusicController : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] _musics;
-    [SerializeField] private int _songsInGroup;
+    [SerializeField] private MusicTrack[] _musics;    
 
     private AudioSource _audioSource;
 
-    public void PlayMusic(int collection)
+    public void PlayMusic(int musicGroup)
     {
-        _audioSource = GetComponent<AudioSource>();        
-        int min = collection * _songsInGroup;
-        int max = min + _songsInGroup;
+        _audioSource = GetComponent<AudioSource>();
 
-        _audioSource.clip = _musics[Random.Range(min, max)];
+        var collection = _musics.Where(x => x.MusicGroup == musicGroup).ToArray();
+
+        _audioSource.clip = collection[Random.Range(0, collection.Length)].Track;
         _audioSource.Play();
     }
 }

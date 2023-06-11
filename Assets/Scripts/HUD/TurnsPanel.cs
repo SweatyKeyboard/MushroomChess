@@ -14,6 +14,8 @@ public class TurnsPanel : MonoBehaviour
     public static TurnsPanel Instance;
     public List<ActionPanelElement> TurnsList { get; set; } = new List<ActionPanelElement>();
     public List<ActionLimiterData> TutorialTurnsList { get; set; } = new List<ActionLimiterData>();
+    public a_Action LastAction { get; private set; }
+    public List<ActionPanelElement> _reserveTurnsList;
 
     private Banner _banner;
 

@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoardSize: 5
   MusicGroup: 1
-  HeightMap: 00000000000000000000000000000000000000000000000002000000000000000000000002000000000000000200000001000000040000000300000000000000000000000200000000000000020000000000000000000000020000000200000002000000
+  HeightMap: 00000000000000000000000000000000000000000000000002000000000000000100000002000000000000000200000001000000040000000300000000000000000000000200000000000000020000000000000000000000020000000200000002000000
   FinishPosition:
     _x: 1
     _y: 1
+  CoinPosition:
+    _x: 2
+    _y: 0
   Units:
   - <UnitData>k__BackingField: {fileID: 11400000, guid: e2a675f5094462346bce1ff46b305ef6,
       type: 2}
@@ -38,9 +41,9 @@ MonoBehaviour:
     <Rotation>k__BackingField:
       _angle: 0
     <MoveAcionsCount>k__BackingField: 0
-    <RotateAcionsCount>k__BackingField: 0
+    <RotateAcionsCount>k__BackingField: 1
     <JumpAcionsCount>k__BackingField: 0
-    <SpecialAcionsCount>k__BackingField: 4
+    <SpecialAcionsCount>k__BackingField: 3
   - <UnitData>k__BackingField: {fileID: 11400000, guid: 1c0accdba0ffb9649a890b69a58f23df,
       type: 2}
     <Position>k__BackingField:

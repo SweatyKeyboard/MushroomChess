@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130ab9e7cc4df9043a02ff10802b0d08, type: 3}
+  m_Name: Mimmy
+  m_EditorClassIdentifier: 
+  _unit: {fileID: -1294519640391414429, guid: 66c5cb7702ed6274591da9d3ca2ad12d, type: 3}
+  _nameKey: unit_mimmy
+  _icons: {fileID: 11400000, guid: b8924ceab89540b4a84242e526fdc11a, type: 2}
+  _possibleActions:
+  - {fileID: 11400000, guid: 1f6c50634c88f874dbd2851357ab7422, type: 2}
+  - {fileID: 11400000, guid: f0380789563eb194dbc6b19470394ce8, type: 2}

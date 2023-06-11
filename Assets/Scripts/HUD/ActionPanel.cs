@@ -53,7 +53,7 @@ public class ActionPanel : MonoBehaviour
     public void ShowForUnit(a_Unit unit)
     {
 
-        if (_unitPanel.SelectedUnit != unit)
+        if (_unitPanel.SelectedUnit != null && _unitPanel.SelectedUnit != unit)
             return;
 
         foreach (ActionPanelElement actionPanelElement in _actions)

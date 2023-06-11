@@ -7,7 +7,7 @@ public class Board : MonoBehaviour
 
     [SerializeField] private BoardCell _cellPrefab;
     [SerializeField] private Transform _finishPrefab;
-    [SerializeField] private Transform _coinPrefab;
+    [SerializeField] private Coin _coinPrefab;
 
     [SerializeField] private SingnsList _digits;
     [SerializeField] private SingnsList _letters;
@@ -63,7 +63,6 @@ public class Board : MonoBehaviour
 
     private void CreateFromFileData(BoardData data)
     {
-
         _colorSetter = FindObjectOfType<ColorSetter>();
         _colorSetter.SetBackgroundColor(data.BoardColors.Background);
         _colorSetter.SetFieldColor(data.BoardColors.Field);
@@ -135,6 +134,9 @@ public class Board : MonoBehaviour
 
     private void CreateCoin(Position position)
     {
+        if (FindObjectOfType<LevelSelector>().IsCoinCollectedHere)
+            return;
+
         Instantiate(
                _coinPrefab,
                this[position.X, position.Y] + Vector3.up * 0.25f,

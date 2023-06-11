@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98217f50e4c9ebc4ebd41ac65e484c0c, type: 3}
+  m_Name: Level22
+  m_EditorClassIdentifier: 
+  BoardSize: 5
+  MusicGroup: 0
+  HeightMap: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  FinishPosition:
+    _x: 0
+    _y: 0
+  CoinPosition:
+    _x: 0
+    _y: 0
+  Units:
+  - <UnitData>k__BackingField: {fileID: 11400000, guid: 0aec2a12be35c9c478ad4dca1a57454b,
+      type: 2}
+    <Position>k__BackingField:
+      _x: 0
+      _y: 0
+    <Rotation>k__BackingField:
+      _angle: 0
+    <MoveAcionsCount>k__BackingField: 0
+    <RotateAcionsCount>k__BackingField: 0
+    <JumpAcionsCount>k__BackingField: 0
+    <SpecialAcionsCount>k__BackingField: 10
+  - <UnitData>k__BackingField: {fileID: 11400000, guid: 1c0accdba0ffb9649a890b69a58f23df,
+      type: 2}
+    <Position>k__BackingField:
+      _x: 2
+      _y: 2
+    <Rotation>k__BackingField:
+      _angle: 0
+    <MoveAcionsCount>k__BackingField: 5
+    <RotateAcionsCount>k__BackingField: 5
+    <JumpAcionsCount>k__BackingField: 5
+    <SpecialAcionsCount>k__BackingField: 5
+  - <UnitData>k__BackingField: {fileID: 11400000, guid: 2e5b2ffb4f006e84a88d354303430536,
+      type: 2}
+    <Position>k__BackingField:
+      _x: 4
+      _y: 4
+    <Rotation>k__BackingField:
+      _angle: 0
+    <MoveAcionsCount>k__BackingField: 5
+    <RotateAcionsCount>k__BackingField: 5
+    <JumpAcionsCount>k__BackingField: 5
+    <SpecialAcionsCount>k__BackingField: 5
+  Objects: []
+  BoardColors:
+    _background: {r: 1, g: 0.7311321, b: 0.7311321, a: 0}
+    _objects: {r: 0.92467916, g: 1, b: 0.3160377, a: 0}
+    _field: {r: 0.22467959, g: 0.61818117, b: 0.9339623, a: 0}
+  TutorialInstructions: {fileID: 0}

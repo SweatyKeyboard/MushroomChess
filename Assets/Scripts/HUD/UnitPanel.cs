@@ -13,7 +13,7 @@ public class UnitPanel : MonoBehaviour
     private int _selectedIndex = -1;
 
     public List<UnitPanelElement> Units => _units;
-    public a_Unit SelectedUnit => _units[_selectedIndex].Unit;
+    public a_Unit SelectedUnit => (_selectedIndex > 0 && _selectedIndex < _units.Count) ? _units[_selectedIndex].Unit : null;
 
     public int TotalActionsLast => _units.Select(x => x.JumpsCount + x.MovesCount + x.SpecialCount + x.RotatesCount).Sum();
     public void SelectByUnit(a_Unit unit)

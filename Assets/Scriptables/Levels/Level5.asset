@@ -18,6 +18,9 @@ MonoBehaviour:
   FinishPosition:
     _x: 4
     _y: 4
+  CoinPosition:
+    _x: 4
+    _y: 4
   Units:
   - <UnitData>k__BackingField: {fileID: 11400000, guid: 2327a718d9ad4214d91272b48d39f844,
       type: 2}

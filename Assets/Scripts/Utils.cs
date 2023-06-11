@@ -31,7 +31,9 @@ public enum ActionType
     Throw,
     RollLeft,
     RollRight,
-    Rotate180
+    Rotate180,
+    MimicPrevious,
+    MimicNext
 }
 
 public enum BannerClosingCondition
@@ -39,4 +41,10 @@ public enum BannerClosingCondition
     Time,
     Click,
     LostHover
+}
+
+public enum MimicType
+{
+    Previous,
+    Next
 }
